@@ -30,7 +30,7 @@
             <div class="container">
                 <div class="row  no-gutters">
                     <div class="col-md-2 col-xl-2 col-lg-2 logo-img">
-                        <a href="/l">
+                        <a href="/">
                             <img src="images/logo.png" alt="">
                         </a>
 
@@ -47,7 +47,7 @@
 
                                         </ul>
                                     </li>
-                                    <li><a href="plans.html">PLANS AND PRICING </a>
+                                    <li><a href="/price-plans">PLANS AND PRICING </a>
                                     <li><a href="/contact-us">CONTACT SALES </a>
                                 </ul>
                             </nav>
