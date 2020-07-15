@@ -1,0 +1,261 @@
+.body-wrapper{
+    font-family: "Montserrat Alternates";
+
+
+}/*Upslider css starts here*/
+.Upslider{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 1;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 15px;
+}
+.Upslider h6{
+    color: #fff;
+}
+/*Belowslider css tarts here*/
+.Belowslider{
+    height: 60px;
+    background: #F4F5F9;
+    font-size: 15px;
+    z-index: 1;
+    width: 100%;
+    color: #000;
+    text-align: center;
+    padding: 20px 0;
+}
+/*breadcrumbs css starts here*/
+
+#Page-Breadcrumb{
+    height: 300px;
+    position: relative;
+}
+#Page-Breadcrumb img{
+    height: 350px;
+}
+#Page-Breadcrumb .overlay-page{
+    position: absolute;
+    top: 50px;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    padding: 100px;
+    color: #fff;
+    font-size: 25px;
+    background-color: rgba(0,0,0,0.5);}
+#Page-Breadcrumb .Breadcrumb-title{
+    width: 50%;
+
+}
+
+.Slider-input{
+    color: #fff;
+    margin-top: 40px;
+    margin-left: 10%;
+    width: 80%;
+    height: 45px;
+    text-align: center;
+    font-size: 18px;
+    position: relative;
+}
+.Slider-input.newsletter_form {
+    position: relative;
+    margin-bottom: 0;
+}
+.Slider-input .newsletter_form input {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    padding-left: 20px;
+    font-size: 16px;
+    color: #000000;
+    border-radius: 30px;
+    border: 1px solid #086AD8;
+}
+.Slider-input .newsletter_form button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    background: #015F91;
+    padding: 0 20px;
+    cursor: pointer;
+
+}
+.Slider-input .newsletter_form button a{
+    color: #fff;
+}
+
+/*breadcrumbs css ends here*/
+
+/*faq-title contents css starts */
+.FaqHead{
+    margin: 50px 0;
+}
+.faq-title{
+    font-size: 18px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+.FaqHead p{
+    display: block;
+}
+/*mobile meeting css tarts her*/
+.Modernize img{
+    height: 350px;
+    width: 100%;
+    margin: 60px 0;
+}
+
+/*PatnerBox css starts here*/
+.PatnerBox{
+    max-width: 20%;
+    width: 20%;
+    margin: 20px 0;
+    flex: 0 0  20%;
+
+}
+/*WhyUsBlog css starts here*/
+.WhyUs{
+    background-color: #F4F5F9;
+
+}
+.WhyUsBlog{
+    max-width: 20%;
+    width: 20%;
+    margin: 20px 0;
+    flex: 0 0  20%;
+    text-align: center;
+    padding: 20px auto;
+}
+.WhyUsBlog .icon-box{
+    background-color: #015F91;
+    padding: 10px;
+    color: #fff;
+    margin: 10px auto;
+    height: 50px;
+    font-size: 25px;
+    border-radius: 50%;
+    width: 50px;
+    text-align: center;
+
+}
+/*WhyUsBlog css ends here*/
+
+/*Subscribe css starts here*/
+.Subscribe{
+    background-color: #F4F5F9;
+
+}
+.footer-input{
+    color: #fff;
+    margin-top: 40px;
+    margin-left: 10%;
+    width: 80%;
+    text-align: center;
+    font-size: 18px;
+}
+.newsletter_form {
+    position: relative;
+    margin-bottom: 0;
+}
+.newsletter_form input {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    padding-left: 20px;
+    font-size: 16px;
+    color: #000000;
+    border-radius: 30px;
+    border: 1px solid #086AD8;
+}
+.newsletter_form button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    background: #015F91;
+    padding: 0 20px;
+    cursor: pointer;
+
+}
+.newsletter_form button a{
+    color: #fff;
+}
+
+/*Subscribe css starts here*/
+
+/*responsive css starts here*/
+@media (max-width: 767px) {
+    #Page-Breadcrumb {
+        height: 300px;
+        top: -10px;
+        width: 100%;
+        position: relative;
+    }
+
+    .Upslider h6 {
+        font-size: 12px;
+    }
+
+    #Service-slide .carousel-caption {
+        left: 0;
+        padding: 30px;
+    }
+    #Page-Breadcrumb .overlay-page {
+        position: absolute;
+        top: 50px;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        padding: 50px 0;
+    }
+    #Page-Breadcrumb .Breadcrumb-title {
+        width: 90%;
+    }
+    #Page-Breadcrumb .newsletter_form input {
+        width: 100%;
+        height: 45px;
+        background: #fff;
+        padding-left: 20px;
+        font-size: 12px;
+    }
+    #Page-Breadcrumb .newsletter_form button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        border: none;
+        font-size: 15px;
+    }
+    .Belowslider h6{
+        font-size: 14px;
+    }
+    .myaccordion {
+        width: 100%;
+    }
+    .PatnerBox {
+        max-width: 50%;
+        width: 50%;
+        margin: 20px 0;
+        flex: 0 0 50%;
+    }
+    .WhyUsBlog {
+        max-width: 50%;
+        width: 50%;
+        margin: 20px 0;
+        flex: 0 0 50%;
+    }
+}

@@ -1,0 +1,60 @@
+@extends('admin.dashboard')
+@section('dashboard-body')
+    <!-- Page Heading -->
+   
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page">Subject</li>
+      </ol>
+    </nav>
+        
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-auto">
+          <div class="card shadow mb-4">
+            <div class="card-header py-3 d-flex justify-content-between">
+              <h6 class="m-0 font-weight-bold text-primary pt-2">Subjects Data</h6>
+              <a href="{{route('admin.subject.create')}}"  class="btn btn-primary pull-right float-right">Create Subject</a>
+            </div>
+            <div class="card-body">
+
+              <div class="table">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>Subject</th>
+                      <th>Class</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                      <th>Subject</th>
+                      <th>Class</th>
+                      <th>Action</th>
+                    </tr>
+                  </tfoot>
+                  <tbody>
+                    @foreach($subjects as $subject)
+                      <tr>
+                        <td>{{$subject->subject}}</td>
+                        <td>{{$subject->klass->class}}</td>
+                        <td>
+                            <a href="{{route('admin.subject.edit',['subject'=>$subject->id])}}" class="btn btn-primary btn-circle">
+                              <i class="fas fa-edit"></i>
+                            </a>
+                            <a href="{{route('admin.subject.delete',['subject'=>$subject->id])}}}" class="btn btn-danger btn-circle">
+                              <i class="fas fa-trash"></i>
+                            </a>
+                        </td>
+                        
+                      </tr>
+                    @endforeach
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+    </div>
+@stop

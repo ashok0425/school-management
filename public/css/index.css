@@ -1,0 +1,345 @@
+.body-wrapper{
+    font-family: "Muli";
+}
+/*Upslider css starts here*/
+.Upslider{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 15px;
+}
+.Upslider h6{
+    font-size: 15px;
+}
+/*Lyceex-slide css starts here*/
+.Lyceex-slide{
+    height: 450px;
+    position: relative;
+}
+.Lyceex-slide .carousel-inner{
+    height: 450px;
+}
+.Lyceex-slide .carousel-indicators li {
+    margin-left: 75%;
+}
+.Lyceex-slide .carousel-indicators li{
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+}
+/*Lyceex-slide css ends here*/
+
+/*Belowslider css tarts here*/
+.Belowslider{
+    height: 60px;
+    background: #F4F5F9;
+    font-size: 15px;
+    z-index: 1;
+    width: 100%;
+    color: #000;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/*===========About css starts here==============*/
+.About{
+    background-color: #fff;
+}
+
+.graduation-cap img{
+    height: 300px;
+    width: 100%;
+}
+/*===========About css starts here==============*/
+
+
+/*experience css starts here*/
+.Experience{
+    background-color: #F4F5F9;
+}
+.experience-box{
+    background: #FFFFFF;
+    padding:  20px;
+    text-align: center;
+    border: 1px solid #E5E5E5;
+    box-sizing: border-box;
+    color: #015F91;
+    margin: 20px 0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.experience-box i{
+    font-size: 40px;
+    line-height: 24px;
+    margin: 10px 0 10px 0;
+}
+.experience-box h5{
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    margin: 5px 0 10px 0;
+
+}
+.experience-box:hover{
+    background-color: #015F91;
+    color: #fff;
+}
+/*experience css starts here*/
+
+
+/*review css starts here*/
+.review-grid{
+    background: #F4F5F9;
+    border: 1px solid #F4F5F9;
+    padding: 40px;
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+}
+.partner-img{
+    height: 70px;
+    width: 100%;
+}
+.rating{
+    color: #015F91;
+    display: block;
+}
+.rating span{
+    padding-left: 15px;
+    color: #000;
+}
+.review-grid .btn{
+    margin: 15px 0;
+}
+
+
+/*service tab css starts here*/
+.ServiceTab{
+    background: #F4F5F9;
+
+}
+.ServiceTab nav  .nav.nav-tabs ,.nav-tabs .nav-link.active {
+    color: #015F91;
+
+}
+.ServiceTab .nav-item {
+    background: #FFFFFF;
+    padding:  5px;
+    text-align: center;
+    border: 1px solid #E5E5E5;
+    box-sizing: border-box;
+    color: #015F91;
+    margin: 20px 0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.ServiceTab .nav-item  i{
+    font-size: 30px;
+    margin: 15px 0 5px 0;
+
+}
+.ServiceTab .nav-item h5{
+    font-size: 14px;
+    text-align: center;
+    margin: 5px 0 5px 0;
+
+}
+
+.ServiceTab nav  div a.nav-item.nav-link.active:after
+{
+    content: "";
+    position: relative;
+    bottom: -35px;
+    left: -10%;
+    border: 15px solid transparent;
+    border-top-color: #015F91 ;
+}
+.ServiceTab .tab-content{
+    background: #fdfdfd;
+    line-height: 25px;
+    border: 1px solid #ddd;
+    padding:5px 25px;
+    margin: -20px 0 0 0;
+    height:450px ;
+}
+.ServiceTab  .nav-link.active,
+.ServiceTab nav > div a.nav-item.nav-link:hover,
+.ServiceTab nav > div a.nav-item.nav-link:focus
+{
+    border: none;
+    background: #015F91;
+    color:#fff;
+    border-radius:0;
+    transition:background 0.20s linear;
+}
+.ServiceTab .tab-content .tab-pane{
+    padding: 5px 30px ;
+}
+.tab-img{
+    height: 340px;
+}
+/*mid slide css starts here*/
+#Mid-slide .carousel-inner{
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+#Mid-slide .carousel-inner img{
+    height: 500px;
+    width: 100%;
+}
+#Mid-slide .carousel-caption{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    padding: 200px 20%;
+
+    background-color: rgba(0,0,0,0.5);
+
+}
+#Mid-slide .carousel-control-prev ,#Mid-slide .carousel-control-next{
+    z-index: 10;
+
+}
+/*mid slide css ends here*/
+
+
+/*PatnerBox css starts here*/
+
+.PatnerBox{
+    max-width: 20%;
+    width: 20%;
+    margin: 20px 0;
+    flex: 0 0  20%;
+
+}
+/*WhyUsBlog css starts here*/
+
+.WhyUsBlog{
+    max-width: 20%;
+    width: 20%;
+    margin: 20px 0;
+    flex: 0 0  20%;
+    text-align: center;
+    padding: 20px auto;
+}
+.WhyUsBlog .icon-box{
+    background-color: #015F91;
+    padding: 10px;
+    color: #fff;
+    margin: 10px auto;
+    height: 50px;
+    font-size: 25px;
+    border-radius: 50%;
+    width: 50px;
+    text-align: center;
+
+}
+/*WhyUsBlog css ends here*/
+
+/*Subscribe css starts here*/
+
+.footer-input{
+    color: #fff;
+    margin-top: 40px;
+    margin-left: 10%;
+    width: 80%;
+    text-align: center;
+    font-size: 18px;
+}
+.newsletter_form {
+    position: relative;
+    margin-bottom: 0;
+}
+.newsletter_form input {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    padding-left: 20px;
+    font-size: 16px;
+    color: #000000;
+    border-radius: 30px;
+    border: 1px solid #086AD8;
+}
+.newsletter_form button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    background: #015F91;
+    padding: 0 20px;
+    cursor: pointer;
+
+}
+.newsletter_form button a{
+    color: #fff;
+}
+
+/*Subscribe css starts here*/
+
+
+
+/*responsive css starts here*/
+@media (max-width: 767px) {
+    .Lyceex-slide .carousel-inner {
+        height: 350px;
+    }
+    .Lyceex-slide {
+        height: 350px;
+        top: -10px;
+        position: relative;
+    }
+    .Upslider h6{
+        font-size: 12px;
+    }
+    .carousel-control-next{
+        margin: 25px;
+    }
+    .ServiceTab .tab-content{
+        margin: 0;
+        height: auto;
+    }
+    .ServiceTab .nav-item{
+        margin: 0;
+    }
+    .ServiceTab .tab-content .tab-pane {
+        padding: 5px 0;
+    }
+    .tab-img {
+        height: 250px;
+    }
+    #Mid-slide .carousel-inner img {
+        height: 375px;
+        width: 100%;
+    }
+    #Mid-slide .carousel-caption {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        padding: 90px 10%;
+        background-color: rgba(0,0,0,0.5);
+    }
+    .PatnerBox {
+        max-width: 50%;
+        width: 50%;
+        margin: 20px 0;
+        flex: 0 0 50%;
+    }
+    .WhyUsBlog {
+        max-width: 50%;
+        width: 50%;
+        margin: 20px 0;
+        flex: 0 0 50%;
+    }
+}
