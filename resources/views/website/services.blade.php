@@ -4,15 +4,15 @@
 <!--body wrapper starts here-->
 <section class="body-wrapper">
     <!--sllider image starts here-->
-    <div id="Service-slide" class="carousel slide Lyceex-slide" data-ride="carousel">
-        <div class="Upslider">
+    <div id="service-slide" class="carousel slide  " data-ride="carousel">
+        <div class="upslider">
             <h6>We have developed resources to help you through this challenging time. <a href="#">Click here </a>to learn more.</h6>
         </div>
         <!-- Indicators -->
         <ul class="carousel-indicators">
-            <li data-target="#Service-slide" data-slide-to="0" class="active"></li>
-            <li data-target="#Service-slide" data-slide-to="1"></li>
-            <li data-target="#Service-slide" data-slide-to="2"></li>
+            <li data-target="#service-slide" data-slide-to="0" class="active"></li>
+            <li data-target="#service-slide" data-slide-to="1"></li>
+            <li data-target="#service-slide" data-slide-to="2"></li>
         </ul>
 
         <!-- The slideshow -->
@@ -25,7 +25,7 @@
                             <h5 class="text-center section-md-headings">LyceeX Meeting  And Chats</h5>
                             <h6 class="text-center section-md-sm-headings">Enterprise video conferencing with real-time messaging and content sharing
                             </h6>
-                            <div class="Slider-input">
+                            <div class="slider-input">
                                 <form action="#" class="newsletter_form">
                                     <input type="text" placeholder="Enter Your Email">
                                     <button class="btn btn-primary btn-rounded"> <a href="#">Subscribe</a></button>
@@ -41,21 +41,21 @@
         </div>
 
         <!-- Left and right controls -->
-        <a class="carousel-control-prev" href="#Service-slide" data-slide="prev">
+        <a class="carousel-control-prev" href="#service-slide" data-slide="prev">
             <span class="carousel-control-prev-icon"></span>
         </a>
-        <a class="carousel-control-next" href="#Service-slide" data-slide="next">
+        <a class="carousel-control-next" href="#service-slide" data-slide="next">
             <span class="carousel-control-next-icon"></span>
         </a>
 
     </div>
-    <div class="Belowslider">
+    <div class="belowslider">
         <h6>Learning made easy. Our Lyceex experts offer sessions daily on all things Lyceex.</h6>
     </div>
     <!--sllider image ends here-->
 
     <!--about section starts here-->
-    <section class="About section-paddings">
+    <section class="about section-paddings">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
@@ -83,12 +83,12 @@
     <!--about section ends here-->
 
     <!--Description starts here-->
-    <section class="Description section-paddings">
+    <section class="description section-paddings">
         <div class="container">
             <h5 class="text-center section-md-headings">Simplified video conferencing and messaging across any device
                 </h5>
             <div class="row">
-                <div class="col-md-4 DescriptionBox border-right">
+                <div class="col-md-4 descriptionbox border-right">
                     <div class="desc-box"><i class="fas fa-thumbs-up"></i></div>
                     <h5>Unparalleled usability</h5>
                     <p>Enable quick adoption with meeting capabilities
@@ -97,7 +97,7 @@
 
                     </p>
                 </div>
-                <div class="col-md-4 DescriptionBox border-right">
+                <div class="col-md-4 descriptionbox border-right">
                     <div class="desc-box"><i class="fas fa-thumbs-up"></i></div>
                     <h5>Unparalleled usability</h5>
                     <p>Enable quick adoption with meeting capabilities
@@ -106,7 +106,7 @@
 
                     </p>
                 </div>
-                <div class="col-md-4 DescriptionBox ">
+                <div class="col-md-4 descriptionbox ">
                     <div class="desc-box"><i class="fas fa-thumbs-up"></i></div>
                     <h5>Unparalleled usability</h5>
                     <p>Enable quick adoption with meeting capabilities
@@ -121,7 +121,7 @@
     <!--Description ends here-->
 
     <!--ModernTeams section starts here-->
-    <section class="ModernTeams bg-white section-paddings">
+    <section class="modernteams bg-white section-paddings">
         <div class="container">
             <h5 class="text-center section-md-headings">Built for modern teams</h5>
             <div class="row">
@@ -204,7 +204,7 @@
     <!--ModernTeams section ends here-->
 
     <!--Modern section starts here-->
-    <section class="Modern section-paddings">
+    <section class="modern section-paddings">
         <div class="container">
             <div class="row">
                 <div class="col-md-7">
@@ -235,7 +235,7 @@
 
 
                 </div>
-                <div class="col-md-5 Modernize">
+                <div class="col-md-5 modernize">
                     <img src="images/modernize.png" class="img img-responsive">
                 </div>
             </div>
@@ -246,11 +246,11 @@
 
 
     <!--mobile meeting css tarts here-->
-    <section class="MobileMeetings section-paddings">
+    <section class="mobilemeetings section-paddings">
         <div class="container">
             <div class="row">
 
-                <div class="col-md-5 Modernize">
+                <div class="col-md-5 modernize">
                     <img src="images/mobile-meetings.png" class="img img-responsive">
                 </div>
                 <div class="col-md-7">
@@ -290,23 +290,23 @@
 
 
     <!--Partners section  starts here-->
-    <section class="Partners bg-off-white section-paddings">
+    <section class="partners bg-off-white section-paddings">
         <div class="container">
             <h5 class="text-center section-md-headings">Our Partners.</h5>
             <div class="row">
-                <div class="col-md-2 PatnerBox">
+                <div class="col-md-2 patnerbox">
                     <img src="images/partner1.png" class="img img-responsive" width="100%">
                 </div>
-                <div class="col-md-2 PatnerBox">
+                <div class="col-md-2 patnerbox">
                     <img src="images/partner2.png" class="img img-responsive" width="100%">
                 </div>
-                <div class="col-md-2 PatnerBox">
+                <div class="col-md-2 patnerbox">
                     <img src="images/partner3.jpg" class="img img-responsive"width="100%">
                 </div>
-                <div class="col-md-2 PatnerBox">
+                <div class="col-md-2 patnerbox">
                     <img src="images/partner1.png" class="img img-responsive" width="100%">
                 </div>
-                <div class="col-md-2 PatnerBox">
+                <div class="col-md-2 patnerbox">
                     <img src="images/partner2.png" class="img img-responsive"width="100%">
                 </div>
             </div>
@@ -316,25 +316,25 @@
     <!--Partners section  ends here-->
 
     <!--Why Us section starts here-->
-    <section class="WhyUs  bg-white  section-paddings">
+    <section class="whyus  bg-white  section-paddings">
         <div class="container">
             <h5 class="text-center section-md-headings">Why Lyceex?</h5>
             <h6 class="text-center section-md-sm-headings">Reason to Choose us </h6>
 
             <div class="row">
-                <div class="col-md-2 WhyUsBlog">
+                <div class="col-md-2 whyusblog">
                     <div class="icon-box"><i class="fas fa-thumbs-up"></i></div>
                     <p>One consistent enterprise
                         experience for all use cases
                     </p>
                 </div>
-                <div class="col-md-2 WhyUsBlog">
+                <div class="col-md-2 whyusblog">
                     <div class="icon-box"><i class="fas fa-cloud"></i></div>
                     <p>Most affordable, straightf
                         orward pricing
                     </p>
                 </div>
-                <div class="col-md-2 WhyUsBlog">
+                <div class="col-md-2 whyusblog">
                     <div class="icon-box"><i class="fas fa-user-friends"></i></div>
                     <p>Up to 1,000 video participants
                         & 10,000 viewers
@@ -342,7 +342,7 @@
 
                     </p>
                 </div>
-                <div class="col-md-2 WhyUsBlog">
+                <div class="col-md-2 whyusblog">
                     <div class="icon-box"><i class="fas fa-shield-alt"></i></div>
                     <p>Engineered & optimized to
                         work reliably
@@ -350,7 +350,7 @@
 
                     </p>
                 </div>
-                <div class="col-md-2 WhyUsBlog">
+                <div class="col-md-2 whyusblog">
                     <div class="icon-box"><i class="fa fa fa-plus"></i></div>
                     <p>Most affordable, straightf
                         orward pricing
@@ -365,23 +365,23 @@
     <!--Why Us section ends here-->
 
     <!--Recognized section  starts here-->
-    <section class="Recognized bg-off-white section-paddings">
+    <section class="recognized bg-off-white section-paddings">
         <div class="container">
             <h5 class="text-center section-md-headings">Recognized In</h5>
             <div class="row">
-                <div class="col-md-2 PatnerBox">
+                <div class="col-md-2 patnerbox">
                     <img src="images/recognized1.png" class="img img-responsive"  width="100%">
                 </div>
-                <div class="col-md-2 PatnerBox">
+                <div class="col-md-2 patnerbox">
                     <img src="images/recognozed2.png" class="img img-responsive" width="100%">
                 </div>
-                <div class="col-md-2 PatnerBox">
+                <div class="col-md-2 patnerbox">
                     <img src="images/recognized3.png" class="img img-responsive" width="100%">
                 </div>
-                <div class="col-md-2 PatnerBox">
+                <div class="col-md-2 patnerbox">
                     <img src="images/recognozed4.png" class="img img-responsive" width="100%">
                 </div>
-                <div class="col-md-2 PatnerBox">
+                <div class="col-md-2 patnerbox">
                     <img src="images/recognozed2.png" class="img img-responsive" width="100%">
                 </div>
             </div>
@@ -391,7 +391,7 @@
     <!--Recognized section  ends here-->
 
     <!--subscribe sectioon starts here-->
-    <section class="Subscribe bg-white section-paddings">
+    <section class="subscribe bg-white section-paddings">
         <div class="container">
             <h5 class="text-center section-md-headings">Lyceex is Ranked #1</h5>
             <h6 class="text-center section-md-sm-headings">in Customer Reviews</h6>

@@ -5,13 +5,13 @@
 <!--body wrapper starts here-->
 <section class="body-wrapper">
     <!--sllider image starts here-->
-    <div id="Page-Breadcrumb" >
-        <div class="Upslider">
+    <div id="page-breadcrumb" >
+        <div class="upslider">
             <h6>We have developed resources to help you through this challenging time. <a href="#">Click here </a>to learn more.</h6>
         </div>
         <img src="images/priceBanner.jpg"  class="img img-responsive" width="100%" height="500">
         <div class="overlay-page">
-            <div class="Breadcrumb-title">
+            <div class="breadcrumb-title">
                 <h5 class="text-center text-white section-md-headings">Terms and Conditions for Company Name</h5>
             </div>
 
@@ -20,9 +20,9 @@
     <!--sllider image ends here-->
 
     <!--contents faq starts here-->
-    <section class="FaqHeadings section-paddings">
+    <section class="faqheadings section-paddings">
         <div class="container">
-            <div class="row FaqHead">
+            <div class="row faqhead">
                     <div class="section-sm-headings">Introduction</div>
                 <p>
                 These Website Standard Terms and Conditions written on this webpage shall manage your use of our website, Webiste Name accessible at Website.com.
@@ -94,7 +94,7 @@
 
 
     <!--mobile meeting css tarts here-->
-    <section class="MobileMeetings section-paddings">
+    <section class="mobilemeetings section-paddings">
         <div class="container">
             <div class="row">
 
@@ -142,19 +142,19 @@
         <div class="container">
             <h5 class="text-center section-md-headings">Our Partners.</h5>
             <div class="row">
-                <div class="col-md-2 PatnerBox">
+                <div class="col-md-2 partnerbox">
                     <img src="images/partner1.png" class="img img-responsive" width="100%">
                 </div>
-                <div class="col-md-2 PatnerBox">
+                <div class="col-md-2 partnerbox">
                     <img src="images/partner2.png" class="img img-responsive" width="100%">
                 </div>
-                <div class="col-md-2 PatnerBox">
+                <div class="col-md-2 partnerbox">
                     <img src="images/partner3.jpg" class="img img-responsive" width="100%">
                 </div>
-                <div class="col-md-2 PatnerBox">
+                <div class="col-md-2 partnerbox">
                     <img src="images/partner1.png" class="img img-responsive" width="100%">
                 </div>
-                <div class="col-md-2 PatnerBox">
+                <div class="col-md-2 partnerbox">
                     <img src="images/partner2.png" class="img img-responsive" width="100%">
                 </div>
             </div>
@@ -164,25 +164,25 @@
     <!--Partners section  ends here-->
 
     <!--Why Us section starts here-->
-    <section class="WhyUs  section-paddings">
+    <section class="whyus  section-paddings">
         <div class="container">
             <h5 class="text-center section-md-headings">Why Lyceex?</h5>
             <h6 class="text-center section-md-sm-headings">Reason to Choose us </h6>
 
             <div class="row">
-                <div class="col-md-2 WhyUsBlog">
+                <div class="col-md-2 whyusblog">
                     <div class="icon-box"><i class="fas fa-thumbs-up"></i></div>
                     <p>One consistent enterprise
                         experience for all use cases
                     </p>
                 </div>
-                <div class="col-md-2 WhyUsBlog">
+                <div class="col-md-2 whyusblog">
                     <div class="icon-box"><i class="fas fa-cloud"></i></div>
                     <p>Most affordable, straightf
                         orward pricing
                     </p>
                 </div>
-                <div class="col-md-2 WhyUsBlog">
+                <div class="col-md-2 whyusblog">
                     <div class="icon-box"><i class="fas fa-user-friends"></i></div>
                     <p>Up to 1,000 video participants
                         & 10,000 viewers
@@ -190,7 +190,7 @@
 
                     </p>
                 </div>
-                <div class="col-md-2 WhyUsBlog">
+                <div class="col-md-2 whyusblog">
                     <div class="icon-box"><i class="fas fa-shield-alt"></i></div>
                     <p>Engineered & optimized to
                         work reliably
@@ -198,7 +198,7 @@
 
                     </p>
                 </div>
-                <div class="col-md-2 WhyUsBlog">
+                <div class="col-md-2 whyusblog">
                     <div class="icon-box"><i class="fa fa fa-plus"></i></div>
                     <p>Most affordable, straightf
                         orward pricing
@@ -212,23 +212,23 @@
     <!--Why Us section ends here-->
 
     <!--Recognized section  starts here-->
-    <section class="Recognized bg-white section-paddings">
+    <section class="recognized bg-white section-paddings">
         <div class="container">
             <h5 class="text-center section-md-headings">Recognized In</h5>
             <div class="row">
-                <div class="col-md-2 PatnerBox">
+                <div class="col-md-2 partnerbox">
                     <img src="images/recognized1.png" width="100%">
                 </div>
-                <div class="col-md-2 PatnerBox">
+                <div class="col-md-2 partnerbox">
                     <img src="images/recognozed2.png" width="100%">
                 </div>
-                <div class="col-md-2 PatnerBox">
+                <div class="col-md-2 partnerbox">
                     <img src="images/recognized3.png" width="100%">
                 </div>
-                <div class="col-md-2 PatnerBox">
+                <div class="col-md-2 partnerbox">
                     <img src="images/recognozed4.png" width="100%">
                 </div>
-                <div class="col-md-2 PatnerBox">
+                <div class="col-md-2 partnerbox">
                     <img src="images/recognozed2.png" width="100%">
                 </div>
             </div>
@@ -238,7 +238,7 @@
     <!--Recognized section  ends here-->
 
     <!--subscribe sectioon starts here-->
-    <section class="Subscribe  section-paddings">
+    <section class="subscribe  section-paddings">
         <div class="container">
             <h5 class="text-center section-md-headings">Lyceex is Ranked #1</h5>
             <h6 class="text-center section-md-sm-headings">in Customer Reviews</h6>
@@ -255,7 +255,4 @@
 
 </section>
 <!--body wrapper ends here-->
-
-
-
 @endsection

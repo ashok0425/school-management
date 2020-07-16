@@ -37,8 +37,8 @@
             <div class="col-xs-3 col-sm-2 col-md-2 border-right Links-list ">
                 <h5>Follow us</h5>
                 <ul class="list-unstyled quick-links">
-                    <li><a href="/"><i class="fa fa-angle-double-right"></i>Home</a></li>
-                    <li><a href="/"><i class="fa fa-angle-double-right"></i>About</a></li>
+                    <li><a href="#"><i class="fa fa-angle-double-right"></i>Home</a></li>
+                    <li><a href="#"><i class="fa fa-angle-double-right"></i>About</a></li>
                     <li><a href="/faq"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
                     <li><a href="/terms-and-conditions"><i class="fa fa-angle-double-right"></i>Terms & Conditions</a></li>
                     <li><a href="https://wwwe.sunlimetech.com" title="Design and developed by"><i class="fa fa-angle-double-right"></i>Imprint</a></li>
@@ -56,8 +56,7 @@
             </div>
         </div>
     </div>
-</section>
-<div class="bottom-navbar">
+</section><div class="bottom-navbar">
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">

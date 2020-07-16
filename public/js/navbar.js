@@ -1,4 +1,5 @@
-(function ($) {
+$(document).ready(function () {
+    (function ($) {
     "use strict";
 // TOP Menu Sticky
     $(window).on('scroll', function () {
@@ -31,6 +32,7 @@
 
 // review-active
         $('.slider_active').owlCarousel({
+          
             loop:true,
             margin:0,
             items:1,
@@ -748,7 +750,7 @@ function showSlides(n) {
             }
         }
     }
-})();
+})(jQuery);
 
 inputNumber($('.input-number'));
-
+});

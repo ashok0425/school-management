@@ -5,12 +5,12 @@
 <!--body wrapper starts here-->
 <section class="body-wrapper">
     <!--sllider image starts here-->
-    <div id="Page-Breadcrumb" >
-        <div class="Upslider">
+    <div id="plan-page-breadcrumb" >
+        <div class="upslider">
             <h6>We have developed resources to help you through this challenging time. <a href="#">Click here </a>to learn more.</h6>
         </div>
         <img src="images/priceBanner.jpg"  width="100%" height="500" class="img img-responsive">
-        <div class="Breadcrumb-title"><h4 class="section-md-headings m-b-20">Lyceex Plan for Buisness</h4>
+        <div class="breadcrumb-title"><h4 class="section-md-headings m-b-20">Lyceex Plan for Buisness</h4>
         <p>A Participant is an invitee in a meeting scheduled by someone with a Host license.
             A Participant does not require a Lyceex account in order to join a meeting.
             Participants can join a Lyceex from their phone, desktop, mobile and tablet devices.
@@ -24,16 +24,16 @@
     <!--sllider image ends here-->
 
     <!--Plans section starts here-->
-    <section class="Plansection bg-white section-paddings">
+    <section class="plansection bg-white section-paddings">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 PlanBox BasicPlan">
-                    <div class="PlanHead">
+                <div class="col-md-4 planbox basicplan">
+                    <div class="planhead">
                         <div class="title">Basic</div>
                         <div class="desc">Personal Meeting</div>
                         <div class="amount">Free</div>
                     </div>
-                    <div class="PlanBody">
+                    <div class="planbody">
                         <div class="items"><i class="fa fa-check"></i> All Basic features </div>
                         <div class="items"><i class="fa fa-check"></i> Includes 100 participants</div>
                         <div class="items"><i class="fa fa-check"></i> Meeting duration limit is 24 hrs</div>
@@ -47,13 +47,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 PlanBox StandardPlan">
-                    <div class="PlanHead">
+                <div class="col-md-4 planbox standardplan">
+                    <div class="planhead">
                         <div class="title">Standard</div>
                         <div class="desc">Great for Small Teams</div>
                         <div class="amount">$14.99/mo/host</div>
                     </div>
-                    <div class="PlanBody">
+                    <div class="planbody">
                         <div class="items"><i class="fa fa-check"></i> All Basic features </div>
                         <div class="items"><i class="fa fa-check"></i> Includes 100 participants</div>
                         <div class="items"><i class="fa fa-check"></i> Meeting duration limit is 24 hrs</div>
@@ -75,13 +75,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 PlanBox NormalPlan">
-                    <div class="PlanHead">
+                <div class="col-md-4 planbox normalplan">
+                    <div class="planhead">
                         <div class="title">Basic</div>
                         <div class="desc">Great for Small Teams</div>
                         <div class="amount">$14.99/mo/host</div>
                     </div>
-                    <div class="PlanBody">
+                    <div class="planbody">
                         <div class="items"><i class="fa fa-check"></i> All Basic features </div>
                         <div class="items"><i class="fa fa-check"></i> Includes 100 participants</div>
                         <div class="items"><i class="fa fa-check"></i> Meeting duration limit is 24 hrs</div>
@@ -107,7 +107,7 @@
         <div class="container">
             <h5 class="text-center section-md-headings">Every Busines Plan Includes</h5>
             <div class="row">
-                <div class="col-md-4 EveryPlan">
+                <div class="col-md-4 everyplan">
                     <div class="items"><i class="fa fa-check"></i>Desktop Sync</div>
                     <div class="items"><i class="fa fa-check"></i> SSL and At Rest  </div>
                     <div class="items"><i class="fa fa-check"></i> Rich File Preview </div>
@@ -117,7 +117,7 @@
                     <div class="items"><i class="fa fa-check"></i> SSL and At Rest </div>
                     <div class="items"><i class="fa fa-check"></i> SSL and At Rest </div>
                 </div>
-                <div class="col-md-4 EveryPlan">
+                <div class="col-md-4 everyplan">
                     <div class="items"><i class="fa fa-check"></i>Mobile Access </div>
                     <div class="items"><i class="fa fa-check"></i> Rich File Preview </div>
                     <div class="items"><i class="fa fa-check"></i> File Locking </div>
@@ -127,7 +127,7 @@
                     <div class="items"><i class="fa fa-check"></i>Box Content </div>
                     <div class="items"><i class="fa fa-check"></i> Access </div>
                 </div>
-                <div class="col-md-4 EveryPlan">
+                <div class="col-md-4 everyplan">
                     <div class="items"><i class="fa fa-check"></i>Rich File Preview</div>
                     <div class="items"><i class="fa fa-check"></i> SSL and At Rest</div>
                     <div class="items"><i class="fa fa-check"></i> Rich File Preview </div>
@@ -146,11 +146,11 @@
 
 
     <!--mobile meeting css tarts here-->
-    <section class="MobileMeetings bg-white section-paddings">
+    <section class="mobilemeetings bg-white section-paddings">
         <div class="container">
             <div class="row">
 
-                <div class="col-md-5 Modernize">
+                <div class="col-md-5 modernize">
                     <img src="images/mobile-meetings.png" class="img img-responsive">
                 </div>
                 <div class="col-md-7">
@@ -190,23 +190,23 @@
 
 
     <!--Partners section  starts here-->
-    <section class="Partners bg-off-white section-paddings">
+    <section class="partners bg-off-white section-paddings">
         <div class="container">
             <h5 class="text-center section-md-headings">Our Partners.</h5>
             <div class="row">
-                <div class="col-md-2 PatnerBox">
+                <div class="col-md-2 patnerbox">
                     <img src="images/partner1.png" class="img img-responsive" width="100%">
                 </div>
-                <div class="col-md-2 PatnerBox">
+                <div class="col-md-2 patnerbox">
                     <img src="images/partner2.png" class="img img-responsive" width="100%">
                 </div>
-                <div class="col-md-2 PatnerBox">
+                <div class="col-md-2 patnerbox">
                     <img src="images/partner3.jpg" class="img img-responsive" width="100%">
                 </div>
-                <div class="col-md-2 PatnerBox">
+                <div class="col-md-2 patnerbox">
                     <img src="images/partner1.png" class="img img-responsive"width="100%">
                 </div>
-                <div class="col-md-2 PatnerBox">
+                <div class="col-md-2 patnerbox">
                     <img src="images/partner2.png" class="img img-responsive"width="100%">
                 </div>
             </div>
@@ -222,19 +222,19 @@
             <h6 class="text-center section-md-sm-headings">Reason to Choose us </h6>
 
             <div class="row">
-                <div class="col-md-2 WhyUsBlog">
+                <div class="col-md-2 whyusblog">
                     <div class="icon-box"><i class="fas fa-thumbs-up"></i></div>
                     <p>One consistent enterprise
                         experience for all use cases
                     </p>
                 </div>
-                <div class="col-md-2 WhyUsBlog">
+                <div class="col-md-2 whyusblog">
                     <div class="icon-box"><i class="fas fa-cloud"></i></div>
                     <p>Most affordable, straightf
                         orward pricing
                     </p>
                 </div>
-                <div class="col-md-2 WhyUsBlog">
+                <div class="col-md-2 whyusblog">
                     <div class="icon-box"><i class="fas fa-user-friends"></i></div>
                     <p>Up to 1,000 video participants
                         & 10,000 viewers
@@ -242,7 +242,7 @@
 
                     </p>
                 </div>
-                <div class="col-md-2 WhyUsBlog">
+                <div class="col-md-2 whyusblog">
                     <div class="icon-box"><i class="fas fa-shield-alt"></i></div>
                     <p>Engineered & optimized to
                         work reliably
@@ -250,7 +250,7 @@
 
                     </p>
                 </div>
-                <div class="col-md-2 WhyUsBlog">
+                <div class="col-md-2 whyusblog">
                     <div class="icon-box"><i class="fa fa fa-plus"></i></div>
                     <p>Most affordable, straightf
                         orward pricing
@@ -265,23 +265,23 @@
     <!--Why Us section ends here-->
 
     <!--Recognized section  starts here-->
-    <section class="Recognized bg-off-white section-paddings">
+    <section class=" bg-off-white section-paddings">
         <div class="container">
             <h5 class="text-center section-md-headings">Recognized In</h5>
             <div class="row">
-                <div class="col-md-2 PatnerBox">
+                <div class="col-md-2 patnerbox">
                     <img src="images/recognized1.png" class="img img-responsive" width="100%">
                 </div>
-                <div class="col-md-2 PatnerBox">
+                <div class="col-md-2 patnerbox">
                     <img src="images/recognozed2.png" class="img img-responsive" width="100%">
                 </div>
-                <div class="col-md-2 PatnerBox">
+                <div class="col-md-2 patnerbox">
                     <img src="images/recognized3.png" class="img img-responsive" width="100%">
                 </div>
-                <div class="col-md-2 PatnerBox">
+                <div class="col-md-2 patnerbox">
                     <img src="images/recognozed4.png" class="img img-responsive" width="100%">
                 </div>
-                <div class="col-md-2 PatnerBox">
+                <div class="col-md-2 patnerbox">
                     <img src="images/recognozed2.png" class="img img-responsive" width="100%">
                 </div>
             </div>
@@ -291,7 +291,7 @@
     <!--Recognized section  ends here-->
 
     <!--subscribe sectioon starts here-->
-    <section class="Subscribe bg-white  section-paddings">
+    <section class=" bg-white  section-paddings">
         <div class="container">
             <h5 class="text-center section-md-headings">Lyceex is Ranked #1</h5>
             <h6 class="text-center section-md-sm-headings">in Customer Reviews</h6>

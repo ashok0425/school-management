@@ -3,19 +3,18 @@
 @section('page')
 
 
-<!--body wrapper starts here-->
 <section class="body-wrapper">
     <!--sllider image starts here-->
-    <div id="Page-Breadcrumb" >
-        <div class="Upslider">
+    <div id="faq-page-breadcrumb" >
+        <div class="upslider">
             <h6>We have developed resources to help you through this challenging time. <a href="#">Click here </a>to learn more.</h6>
         </div>
         <img src="images/banner_faq.png"  width="100%" height="500" class="img img-responsive">
         <div class="overlay-page">
-            <div class="Breadcrumb-title">
+            <div class="breadcrumb-title">
                 <h5 class="text-white section-headings">Frequently Asked Questions</h5>
 
-                <div class="Slider-input">
+                <div class="slider-input">
                     <form action="#" class="newsletter_form">
                         <input type="text" placeholder="Enter Your query">
                         <button class="btn btn-primary btn-rounded"> <a href="#">Search</a></button>
@@ -28,10 +27,10 @@
     <!--sllider image ends here-->
 
     <!--contents faq starts here-->
-    <section class="FaqHeadings section-paddings">
+    <section class="faqheadings bg-white section-paddings">
         <div class="container">
             <h5 class="section-headings">Everything that you need to know about Lyceex</h5>
-            <div class="row FaqHead">
+            <div class="row faqhead">
                 <div class="col-md-4">
                     <div class="faq-title"><a href="#">Getting started with Lyceex</a></div>
                     <div class="faq-title"><a href="#">Lyceex webinars</a></div>
@@ -68,13 +67,13 @@
         </div>
     </section>
 
-    <section class="AccordingFaq section-paddings">
+    <section class="accordingfaq bg-off-white section-paddings">
         <div class="container">
             <div id="accordion" class="myaccordion">
                 <div class="card">
-                    <div class="card-header" id="headingOne">
+                    <div class="card-header" id="headingone">
                         <h2 class="mb-0">
-                            <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseone" aria-expanded="false" aria-controls="collapseone">
                                 Getting started with Lyceex
                                 <span class="fa-stack fa-sm">
                                     <i class="fas fa-circle fa-stack-2x"></i>
@@ -83,7 +82,7 @@
                             </button>
                         </h2>
                     </div>
-                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div id="collapseone" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                         <div class="card-body">
                             <p>Where do I download the latest version of Lyceex?
                                 You can download the latest version of Lyceex from our Download Center. Learn more about downloading Lyceex.</p>
@@ -92,9 +91,9 @@
                     </div>
                 </div>
                 <div class="card">
-                    <div class="card-header" id="headingTwo">
+                    <div class="card-header" id="headingtwo">
                         <h2 class="mb-0">
-                            <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapsetwo" aria-expanded="false" aria-controls="collapsetwo">
                                 Search Plans and Pricing
                                 <span class="fa-stack fa-2x">
                             <i class="fas fa-circle fa-stack-2x"></i>
@@ -103,7 +102,7 @@
                             </button>
                         </h2>
                     </div>
-                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div id="collapsetwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                         <div class="card-body">
                             <p>Where do I download the latest version of Lyceex?
                                 You can download the latest version of Lyceex from our Download Center. Learn more about downloading Lyceex.</p>
@@ -112,9 +111,9 @@
                     </div>
                 </div>
                 <div class="card">
-                    <div class="card-header" id="headingThree">
+                    <div class="card-header" id="headingthree">
                         <h2 class="mb-0">
-                            <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapsethree" aria-expanded="false" aria-controls="collapsethree">
                                 Lyceex webinars
                                 <span class="fa-stack fa-2x">
                                     <i class="fas fa-circle fa-stack-2x"></i>
@@ -123,7 +122,7 @@
                             </button>
                         </h2>
                     </div>
-                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div id="collapsethree" class="collapse" aria-labelledby="headingthree" data-parent="#accordion">
                         <div class="card-body">
                            <p>Where do I download the latest version of Lyceex?
                                You can download the latest version of Lyceex from our Download Center. Learn more about downloading Lyceex.</p>
@@ -139,11 +138,11 @@
 
 
     <!--mobile meeting css tarts here-->
-    <section class="MobileMeetings section-paddings">
+    <section class="mobilemeetings section-paddings">
         <div class="container">
             <div class="row">
 
-                <div class="col-md-5 Modernize">
+                <div class="col-md-5 modernize">
                     <img src="images/mobile-meetings.png" class="img img-responsive">
                 </div>
                 <div class="col-md-7">
@@ -183,23 +182,23 @@
 
 
     <!--Partners section  starts here-->
-    <section class="Partners bg-off-white  section-paddings">
+    <section class="partners bg-off-white  section-paddings">
         <div class="container">
             <h5 class="text-center section-md-headings">Our Partners.</h5>
             <div class="row">
-                <div class="col-md-2 PatnerBox">
+                <div class="col-md-2 patnerbox">
                     <img src="images/partner1.png" class="img img-responsive" width="100%">
                 </div>
-                <div class="col-md-2 PatnerBox">
+                <div class="col-md-2 patnerbox">
                     <img src="images/partner2.png" class="img img-responsive"width="100%">
                 </div>
-                <div class="col-md-2 PatnerBox">
+                <div class="col-md-2 patnerbox">
                     <img src="images/partner3.jpg" class="img img-responsive" width="100%">
                 </div>
-                <div class="col-md-2 PatnerBox">
+                <div class="col-md-2 patnerbox">
                     <img src="images/partner1.png" class="img img-responsive" width="100%">
                 </div>
-                <div class="col-md-2 PatnerBox">
+                <div class="col-md-2 patnerbox">
                     <img src="images/partner2.png" class="img img-responsive" width="100%">
                 </div>
             </div>
@@ -209,25 +208,25 @@
     <!--Partners section  ends here-->
 
     <!--Why Us section starts here-->
-    <section class="WhyUs bg-white section-paddings">
+    <section class="whyus bg-white section-paddings">
         <div class="container">
             <h5 class="text-center section-md-headings">Why Lyceex?</h5>
             <h6 class="text-center section-md-sm-headings">Reason to Choose us </h6>
 
             <div class="row">
-                <div class="col-md-2 WhyUsBlog">
+                <div class="col-md-2 whyusblog">
                     <div class="icon-box"><i class="fas fa-thumbs-up"></i></div>
                     <p>One consistent enterprise
                         experience for all use cases
                     </p>
                 </div>
-                <div class="col-md-2 WhyUsBlog">
+                <div class="col-md-2 whyusblog">
                     <div class="icon-box"><i class="fas fa-cloud"></i></div>
                     <p>Most affordable, straightf
                         orward pricing
                     </p>
                 </div>
-                <div class="col-md-2 WhyUsBlog">
+                <div class="col-md-2 whyusblog">
                     <div class="icon-box"><i class="fas fa-user-friends"></i></div>
                     <p>Up to 1,000 video participants
                         & 10,000 viewers
@@ -235,7 +234,7 @@
 
                     </p>
                 </div>
-                <div class="col-md-2 WhyUsBlog">
+                <div class="col-md-2 whyusblog">
                     <div class="icon-box"><i class="fas fa-shield-alt"></i></div>
                     <p>Engineered & optimized to
                         work reliably
@@ -243,7 +242,7 @@
 
                     </p>
                 </div>
-                <div class="col-md-2 WhyUsBlog">
+                <div class="col-md-2 whyusblog">
                     <div class="icon-box"><i class="fa fa fa-plus"></i></div>
                     <p>Most affordable, straightf
                         orward pricing
@@ -257,23 +256,23 @@
     <!--Why Us section ends here-->
 
     <!--Recognized section  starts here-->
-    <section class="Recognized bg-off-white section-paddings">
+    <section class="recognized bg-off-white section-paddings">
         <div class="container">
             <h5 class="text-center section-md-headings">Recognized In</h5>
             <div class="row">
-                <div class="col-md-2 PatnerBox">
+                <div class="col-md-2 patnerbox">
                     <img src="images/recognized1.png" class="img img-responsive" width="100%">
                 </div>
-                <div class="col-md-2 PatnerBox">
+                <div class="col-md-2 patnerbox">
                     <img src="images/recognozed2.png" class="img img-responsive" width="100%">
                 </div>
-                <div class="col-md-2 PatnerBox">
+                <div class="col-md-2 patnerbox">
                     <img src="images/recognized3.png" class="img img-responsive" width="100%">
                 </div>
-                <div class="col-md-2 PatnerBox">
+                <div class="col-md-2 patnerbox">
                     <img src="images/recognozed4.png" class="img img-responsive"  width="100%">
                 </div>
-                <div class="col-md-2 PatnerBox">
+                <div class="col-md-2 patnerbox">
                     <img src="images/recognozed2.png" class="img img-responsive" width="100%">
                 </div>
             </div>
@@ -283,7 +282,7 @@
     <!--Recognized section  ends here-->
 
     <!--subscribe sectioon starts here-->
-    <section class="Subscribe bg-white section-paddings">
+    <section class="subscribe bg-white section-paddings">
         <div class="container">
             <h5 class="text-center section-md-headings">Lyceex is Ranked #1</h5>
             <h6 class="text-center section-md-sm-headings">in Customer Reviews</h6>
@@ -299,7 +298,6 @@
     <!--subscribe sectioon ends here-->
 
 </section>
-<!--body wrapper ends here-->
-
 
 @endsection
+

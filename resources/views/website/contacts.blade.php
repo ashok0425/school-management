@@ -6,13 +6,13 @@
 <!--body wrapper starts here-->
 <section class="body-wrapper">
     <!--sllider image starts here-->
-    <div id="Page-Breadcrumb" >
-        <div class="Upslider">
+    <div id="page-breadcrumb" >
+        <div class="upslider">
             <h6>We have developed resources to help you through this challenging time. <a href="#">Click here </a>to learn more.</h6>
         </div>
         <img src="images/contact-banner.jpg"  width="100%" height="500" class="img img-responsive">
         <div class="overlay-page">
-            <div class="Breadcrumb-title">
+            <div class="breadcrumb-title">
                 <h5 class="text-white section-headings">Keep In Touch</h5>
                 </div>
             </div>
@@ -22,7 +22,7 @@
     <!--sllider image ends here-->
 
     <!--Contact icon starts here-->
-    <section class="ContactIcon section-paddings">
+    <section class="contact-icon section-paddings">
         <div class="container">
             <div class="row  justify-content-center">
                 <div class="col-md-8">
