@@ -17,8 +17,8 @@ class CreateKlassesTable extends Migration
             $table->bigIncrements('id');
             $table->string('class');
             $table->unsignedBigInteger('level_id');
+            $table->unsignedBigInteger('school_id');
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 

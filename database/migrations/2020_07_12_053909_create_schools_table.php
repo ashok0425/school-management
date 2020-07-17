@@ -15,6 +15,17 @@ class CreateSchoolsTable extends Migration
     {
         Schema::create('schools', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->string('address');
+            $table->string('contact');
+            $table->text('logo');
+            $table->string('panno');
+            $table->text("school_motto");
+            $table->boolean('block')->default(0);
+            $table->string('username');
+            $table->string('password');
+            $table->timestamp('email_verified_at')->nullable();
             $table->timestamps();
         });
     }

@@ -1,23 +1,19 @@
-@extends('admin.dashboard')
+@extends('admin.school.dashboard')
 @section('dashboard-body')
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             
            @include('admin.layout.validation-error')
-           <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item active" aria-current="page">Edit Class</li>
-                </ol>
-            </nav>
+           
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Edit Class: {{$klass->class}}</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Create Class</h6>
                 </div>
                 <div class="card-body">
-                    <form method="post" action="{{route('admin.class.update',['klass'=>$klass->id])}}" class="class" novalidate >
-                        @csrf
+                    <form method="post" action="{{route('school.class.save')}}" class="class" novalidate >
+                    {{csrf_field()}}
                         <div class="form-group">
                             <label for="level">Class</label>
-                            <input type="text" class="form-control" id="class" name="class" placeholder="Eneter Class" required="true" value="{{$klass->class}}">
+                            <input type="text" class="form-control" id="class" name="class" placeholder="Eneter Class" required="true" value="{{old('class')}}">
                             <div class="invalid-feedback">
                                 Please provide a Class.
                             </div>
@@ -25,8 +21,9 @@
                         <div class="form-group">
                             <label for="sel1">Select Level:</label>
                             <select class="custom-select" id="level" name="level" required="true">
+                                <option>----Select Level----</option>
                                 @foreach($levels as $level)
-                                <option value="{{$level->id}}" "{{$klass->level_id==$level->id?'selected':''}}">{{$level->level}}</option>
+                                <option value="{{$level->id}}">{{$level->level}}</option>
                                 @endforeach
                             </select>
                             <div class="invalid-feedback">

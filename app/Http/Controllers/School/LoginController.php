@@ -1,16 +1,17 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\School;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Auth;
+
 class LoginController extends Controller
 {
     public function index()
     {
-        return view('admin.admin.login');
+        return view('admin.school.login');
     }
 
     public function login(Request $request)
@@ -21,11 +22,11 @@ class LoginController extends Controller
         ]);
         $remember=$request->has('remember')?true:false;
         $credentials = $request->only('email', 'password');
-        $authenticate = Auth::guard('superadmin')->attempt($credentials);
+        $authenticate = Auth::guard('school')->attempt($credentials);
        
         if($authenticate){
            
-           return redirect('/admin/dashboard');
+           return redirect('/school/dashboard');
         }else{
             $notification = array(
                 'message' => 'Username and password did not match', 
@@ -38,6 +39,6 @@ class LoginController extends Controller
     public function logout(){
         Auth::logout();
         \Session::flush();
-        return redirect()->route('admin.login');
+        return redirect()->route('school.login');
     }
 }

@@ -1,20 +1,15 @@
-@extends('admin.dashboard')
+@extends('admin.school.dashboard')
 @section('dashboard-body')
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             
            @include('admin.layout.validation-error')
-           <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item active" aria-current="page">Create Subject</li>
-                </ol>
-            </nav>
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">Create Subject</h6>
                 </div>
                 <div class="card-body">
-                    <form method="post" action="{{route('admin.subject.save')}}" class="subject" novalidate >
-                        @csrf
+                    <form method="post" action="{{route('school.subject.save')}}" class="subject" novalidate >
+                        {{csrf_field()}}
                         <div class="form-group">
                             <label for="level">Subject</label>
                             <input type="text" class="form-control" id="subject" name="subject" placeholder="Eneter Subject" required="true" value="{{old('subject')}}">

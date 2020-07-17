@@ -17,8 +17,9 @@ class CreateSubjectsTable extends Migration
             $table->bigIncrements('id');
             $table->string('subject');
             $table->unsignedBigInteger('klass_id');
+            $table->unsignedBigInteger('school_id');
             $table->timestamps();
-            $table->softDeletes();
+            
         });
     }
 

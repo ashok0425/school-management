@@ -5,7 +5,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
         <i class="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">{{Auth::guard('school')->user()->name }}<sup></sup></div>
+        <div class="sidebar-brand-text mx-3">Lyceex<sup></sup></div>
     </a>
 
     <!-- Divider -->
@@ -26,26 +26,12 @@
         Dashboard
     </div> -->
 
-    <li class="nav-item {{Request::segment(2)=='dashboard'?'active':''}} {{Request::segment(2)=='teacher'?'active':''}}">
-        <a class="nav-link " href="{{route('school.dashboard')}}">
+    <li class="nav-item {{Request::segment(2)=='school'?'active':''}}">
+        <a class="nav-link" href="{{route('admin.school.index')}}">
         <i class="fas fa-user-friends"></i>
-        <span>Teacher</span></a>
+        <span>Schools</span></a>
     </li>
-    <li class="nav-item {{Request::segment(2)=='level'?'active':''}}">
-        <a class="nav-link }" href="{{route('school.level')}}">
-        <i class="fas fa-user-friends"></i>
-        <span>Level</span></a>
-    </li>
-    <li class="nav-item {{Request::segment(2)=='class'?'active':''}}">
-        <a class="nav-link " href="{{route('school.class')}}">
-        <i class="fas fa-user-friends"></i>
-        <span>Class</span></a>
-    </li>
-    <li class="nav-item {{Request::segment(2)=='subject'?'active':''}}">
-        <a class="nav-link " href="{{route('school.subject')}}">
-        <i class="fas fa-user-friends"></i>
-        <span>Subject</span></a>
-    </li>
+   
 
     
     <!-- Divider -->

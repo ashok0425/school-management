@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Support\Facades\DB;
 
 class CreateSuperAdminRolesTable extends Migration
 {
@@ -18,6 +19,12 @@ class CreateSuperAdminRolesTable extends Migration
             $table->string('role');
             $table->timestamps();
         });
+        DB::table('super_admin_roles')->insert([
+            [
+                'role'=>'Admin',
+            ],
+        ]);
+
     }
 
     /**

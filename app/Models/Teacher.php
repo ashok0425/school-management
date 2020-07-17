@@ -6,11 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-class School extends Authenticatable
+class Teacher extends Model
 {
-    use Notifiable;
-    protected $guard = 'school';
-    public function getLogoAttribute($value){
+    public function getImageAttribute($value){
         return $value?Storage::url($value):null;
+    }
+
+    public function school(){
+        return $this->belongsTo('App\Models\School');
     }
 }

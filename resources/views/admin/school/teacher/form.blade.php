@@ -1,19 +1,14 @@
-@extends('admin.dashboard')
+@extends('admin.school.dashboard')
 @section('dashboard-body')
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item active" aria-current="page">Create Teacher</li>
-                </ol>
-            </nav>
            @include('admin.layout.validation-error')
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">Create Teacher</h6>
                 </div>
                 <div class="card-body">
-                    <form method="post" action="{{route('admin.teacher.save')}}" class="create-teacher" novalidate oninput='password_confirmation.setCustomValidity(password_confirmation.value != password.value ? "Password did not matched." : "")' enctype="multipart/form-data">
-                        @csrf
+                    <form method="post" action="{{route('school.teacher.save')}}" class="create-teacher" novalidate oninput='password_confirmation.setCustomValidity(password_confirmation.value != password.value ? "Password did not matched." : "")' enctype="multipart/form-data">
+                        {{csrf_field()}}
                         <div class="form-group">
                             <label for="name">Full Name</label>
                             <input type="text" class="form-control" id="name" name="name" placeholder="Teacher Name" required="true" value="{{old('name')}}">

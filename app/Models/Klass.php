@@ -3,10 +3,11 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
+use Auth;
 class Klass extends Model
 {
-    use SoftDeletes;
+    private $guard = 'school';
+
 
     public function level(){
         return $this->belongsTo('App\Models\Level')->withDefault();
@@ -15,4 +16,6 @@ class Klass extends Model
     public function subjects(){
         return $this->hasMany('App\Models\Subject');
     }
+
+    
 }

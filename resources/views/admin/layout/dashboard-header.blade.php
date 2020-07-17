@@ -46,10 +46,10 @@
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{Auth::user()->name}}</span>
-                @if(isset(Auth::user()->image))
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{Auth::guard('school')->user()->name}}</span>
+                @if(isset(Auth::guard('school')->user()->logo))
 
-                    <img class="img-profile rounded-circle" src="{{Auth::user()->image}}">
+                    <img class="img-profile rounded-circle" src="{{Auth::guard('school')->user()->logo}}">
                 @else
                 <img class="img-profile rounded-circle" src="{{asset('admin/img/user.png')}}">
 

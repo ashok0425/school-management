@@ -1,13 +1,6 @@
-@extends('admin.dashboard')
+@extends('admin.school.dashboard')
 @section('dashboard-body')
     <!-- Page Heading -->
-   
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item active" aria-current="page">Teacher</li>
-      </ol>
-    </nav>
-        
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-auto">
           @if(Session::has('success'))
@@ -20,7 +13,7 @@
           <div class="card shadow mb-4">
             <div class="card-header py-3 d-flex justify-content-between">
               <h6 class="m-0 font-weight-bold text-primary pt-2">Teachers Data</h6>
-              <a href="{{route('admin.teacher.create')}}"  class="btn btn-primary pull-right float-right">Create Teacher</a>
+              <a href="{{route('school.teacher.create')}}"  class="btn btn-primary pull-right float-right">Create Teacher</a>
             </div>
             <div class="card-body">
 
@@ -35,21 +28,12 @@
                       <th>Action</th>
                     </tr>
                   </thead>
-                  <tfoot>
-                    <tr>
-                      <th>Name</th>
-                      <th>Email</th>
-                      <th>Contact</th>
-                      <th>Image</th>
-                      <th>Action</th>
-                    </tr>
-                  </tfoot>
                   <tbody>
                     @foreach($users as $user)
                       <tr>
                         <td>{{$user->name}}</td>
                         <td>{{$user->email}}</td>
-                        <td>{{$user->contact}}</td>
+                        <td>{{$user->contactno}}</td>
                         
                         <td> 
                            @if(isset($user->image))
@@ -60,10 +44,10 @@
                             @endif
                         </td>
                         <td>
-                          <a href="{{route('admin.teacher.edit',['user'=>$user->id])}}" class="btn btn-primary btn-circle">
+                          <a href="{{route('school.teacher.edit',['user'=>$user->id])}}" class="btn btn-primary btn-circle">
                             <i class="fas fa-user-edit"></i>
                           </a>
-                          <a href="{{route('admin.teacher.delete',['user'=>$user->id])}}}" class="btn btn-danger btn-circle">
+                          <a href="{{route('school.teacher.delete',['user'=>$user->id])}}}" class="btn btn-danger btn-circle">
                             <i class="fas fa-trash"></i>
                           </a>
                         </td>

@@ -17,9 +17,9 @@
               <div class="col-lg-12 ">
                 <div class="p-5">
                   <div class="text-center">
-                    <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                    <h1 class="h4 text-gray-900 mb-4">Welcome Back To School Login!</h1>
                   </div>
-                  <form method="post" action="{{route('login.submit')}}" class="user" novalidate>
+                  <form method="post" action="{{route('school.login.submit')}}" class="user" novalidate>
                     {{ csrf_field() }}
                      <div class="form-group">
                       <input type="email" name="email" class="form-control form-control-user" id="email" aria-describedby="emailHelp" placeholder="Enter Email Address..." required="true">
