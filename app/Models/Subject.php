@@ -7,8 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Subject extends Model
 {
 
-    public function klass(){
-        return $this->belongsTo('App\Models\Klass')->withDefault();
+    
+
+    public function section(){
+        return $this->belongsTo('App\Models\Section')->withDefault();
     }
 }
 

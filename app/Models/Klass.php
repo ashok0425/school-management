@@ -13,9 +13,13 @@ class Klass extends Model
         return $this->belongsTo('App\Models\Level')->withDefault();
     }
 
-    public function subjects(){
-        return $this->hasMany('App\Models\Subject');
+    public function sections(){
+        return $this->hasMany('App\Models\Section','class_id');
     }
+
+    
+
+    
 
     
 }

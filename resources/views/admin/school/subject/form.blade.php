@@ -14,19 +14,28 @@
                             <label for="level">Subject</label>
                             <input type="text" class="form-control" id="subject" name="subject" placeholder="Eneter Subject" required="true" value="{{old('subject')}}">
                             <div class="invalid-feedback">
-                                Please provide a Class.
+                                Please provide a Subject.
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="sel1">Select Class:</label>
                             <select class="custom-select" id="klass" name="klass" required="true">
-                                <option>----Select Class----</option>
+                                <option data-section="[]">----Select Class----</option>
                                 @foreach($klasses as $klass)
-                                <option value="{{$klass->id}}">{{$klass->class}}</option>
+                                <option value="{{$klass->id}}" data-section='<?php echo json_encode($klass)?>'>{{$klass->class}}</option>
                                 @endforeach
                             </select>
                             <div class="invalid-feedback">
-                                Please Selec a level.
+                                Please Selec a Class.
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="sel1">Select Section:</label>
+                            <select class="custom-select" id="section" name="section" required="true">
+                                <option>----Select Section----</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please Select a Section.
                             </div>
                         </div>
                         <button type="submit" id="submitButton" class="btn btn-primary btn-icon-split">
@@ -61,5 +70,21 @@
         })();
 
         
+    </script>
+    <script>
+        $('#klass').on('change', function (e) {
+            $("#section").empty();
+            // var optionSelected = $("option:selected", this);
+            var optionSelected = $(this).find("option:selected");
+            var dataSection   = JSON.parse(optionSelected.attr("data-section"));
+            
+            $.each(dataSection.sections, function (i, item) {
+                $('#section').append($('<option>', { 
+                    value: item.id,
+                    text : item.section 
+                }));
+            });
+            
+        });
     </script>
 @endpush

@@ -16,19 +16,19 @@ class SubjectController extends Controller
     }
 
     public function show(){
-        $klasses = Klass::where('school_id',Auth::guard('school')->user()->id)->get();
+        $klasses = Klass::with('sections')->where('school_id',Auth::guard('school')->user()->id)->get();
         return view('admin.school.subject.form',compact('klasses'));
     }
 
     public function store(Request $request){
         $this->validate($request,[
             'subject'=>'required',
-            'klass'=>'required|exists:klasses,id',
+            'section'=>'required|exists:sections,id',
         ]);
         try{
             $subject =  new Subject;
             $subject->subject = $request->subject;
-            $subject->klass_id = $request->klass;
+            $subject->section_id = $request->section;
             $subject->school_id = Auth::guard('school')->user()->id;
             $subject->save();
             $notification = array(
@@ -47,7 +47,7 @@ class SubjectController extends Controller
     }
 
     public function edit($subject){
-        $klasses = Klass::where('school_id',Auth::guard('school')->user()->id)->get();
+        $klasses = Klass::with('sections')->where('school_id',Auth::guard('school')->user()->id)->get();
         $subject = Subject::where('school_id',Auth::guard('school')->user()->id)->where('id',$subject)->first();
         if(!$subject){
             $notification = array(
@@ -56,7 +56,7 @@ class SubjectController extends Controller
               );
             return redirect()->back()->with($notification);
         }
-        return view('admin.subject.edit-form',compact('subject','klasses'));
+        return view('admin.school.subject.edit-form',compact('subject','klasses'));
     }
 
     public function update(Request $request, $subject){
@@ -70,7 +70,7 @@ class SubjectController extends Controller
         }
         try{
             $subject->subject = $request->subject;
-            $subject->klass_id = $request->klass;  
+            $subject->section_id = $request->section;  
             $subject->save();
             $notification = array(
                 'message' => 'Subject Updated Successfully.', 

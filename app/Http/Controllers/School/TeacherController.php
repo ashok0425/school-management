@@ -23,7 +23,7 @@ class TeacherController extends Controller
     public function store(Request $request){
         $this->validate($request,[
             'name'=>'required',
-            'email'=>'required|unique:users,email',
+            'email'=>'required|unique:teachers,email',
             'contact'=>'required',
             'password'=>'required|confirmed',
             'image'=>'image|required',

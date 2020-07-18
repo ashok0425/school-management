@@ -28,24 +28,35 @@
 
     <li class="nav-item {{Request::segment(2)=='dashboard'?'active':''}} {{Request::segment(2)=='teacher'?'active':''}}">
         <a class="nav-link " href="{{route('school.dashboard')}}">
-        <i class="fas fa-user-friends"></i>
+        <i class="fas fa-chalkboard-teacher"></i>
         <span>Teacher</span></a>
     </li>
     <li class="nav-item {{Request::segment(2)=='level'?'active':''}}">
         <a class="nav-link }" href="{{route('school.level')}}">
-        <i class="fas fa-user-friends"></i>
+        <i class="fas fa-layer-group"></i>
         <span>Level</span></a>
     </li>
     <li class="nav-item {{Request::segment(2)=='class'?'active':''}}">
         <a class="nav-link " href="{{route('school.class')}}">
-        <i class="fas fa-user-friends"></i>
+        <i class="fas fa-users"></i>
         <span>Class</span></a>
+    </li>
+    <li class="nav-item {{Request::segment(2)=='section'?'active':''}}">
+        <a class="nav-link " href="{{route('school.section')}}">
+        <i class="fas fa-layer-group"></i>
+        <span>Section</span></a>
     </li>
     <li class="nav-item {{Request::segment(2)=='subject'?'active':''}}">
         <a class="nav-link " href="{{route('school.subject')}}">
-        <i class="fas fa-user-friends"></i>
+        <i class="far fa-closed-captioning"></i>
         <span>Subject</span></a>
     </li>
+    <li class="nav-item {{Request::segment(2)=='student'?'active':''}}">
+        <a class="nav-link " href="{{route('school.student')}}">
+        <i class="fas fa-user-friends"></i>
+        <span>Student</span></a>
+    </li>
+  
 
     
     <!-- Divider -->
