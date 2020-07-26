@@ -1,9 +1,17 @@
 <?php
 
-Route::prefix('school')->namespace('School')->name('school.')->group(static function() {
+Route::prefix('')->namespace('School')->name('school.')->group(static function() {
     Route::get('/login','LoginController@index')->name('login');
     Route::post('/login','LoginController@login')->name('login.submit');
     Route::get('/logout','LoginController@logout')->name('logout');
+    Route::get('/register','LoginController@showForm')->name('register');
+    Route::post('/register','LoginController@store')->name('register');
+    Route::post('/resendverification','LoginController@resendVerifyLink')->name('resendverfication');
+    Route::get('/verify/{token}', 'LoginController@verifyUser');
+    Route::get('/forgotpassword','LoginController@forgotPassword')->name('forgotpassword');
+    Route::post('/forgotpassword','LoginController@forgotPasswordSendEmail')->name('forgotpassword');
+    Route::get('/new-password/{token}', 'LoginController@verifyResetLink')->name('resetpassword');
+    Route::post('/new-password', 'LoginController@savePassword')->name('resetpassword');
 
 });
 

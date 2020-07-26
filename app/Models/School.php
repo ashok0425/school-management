@@ -13,4 +13,9 @@ class School extends Authenticatable
     public function getLogoAttribute($value){
         return $value?Storage::url($value):null;
     }
+
+    public function verifySchool()
+    {
+    return $this->hasOne('App\Models\SchoolVerify','school_id');
+    }
 }

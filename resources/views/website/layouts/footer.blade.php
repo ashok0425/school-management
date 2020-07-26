@@ -47,10 +47,10 @@
             <div class="col-xs-3 col-sm-2 col-md-2  Links-list ">
                 <h5>We Accept</h5>
                 <ul class="list-unstyled quick-links">
-                    <li class="payment-gateway"><a href="#"><img src="images/visa.png"> </a></li>
-                    <li class="payment-gateway"><a href="#"><img src="images/master.png"></a> </li>
-                    <li class="payment-gateway"><a href="#"><img src="images/discover.png"></a></li>
-                    <li class="payment-gateway"><a href="#"><img src="images/paypa.png"></a></li>
+                    <li class="payment-gateway"><a href="#"><img src="{{asset('images/visa.png')}}"> </a></li>
+                    <li class="payment-gateway"><a href="#"><img src="{{asset('images/master.png')}}"></a> </li>
+                    <li class="payment-gateway"><a href="#"><img src="{{asset('images/discover.png')}}"></a></li>
+                    <li class="payment-gateway"><a href="#"><img src="{{asset('images/paypa.png')}}"></a></li>
 
                 </ul>
             </div>

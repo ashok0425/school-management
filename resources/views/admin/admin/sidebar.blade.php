@@ -3,16 +3,16 @@
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
         <div class="sidebar-brand-icon rotate-n-15">
-        <i class="fas fa-laugh-wink"></i>
+        
         </div>
-        <div class="sidebar-brand-text mx-3">Lyceex<sup></sup></div>
+        <div class="sidebar-brand-text mx-3"><img src="{{asset('images/logo.png')}}" alt="" width="200px"></div>
     </a>
 
     <!-- Divider -->
     <hr class="sidebar-divider my-0">
 
     <!-- Nav Item - Dashboard -->
-    <li class="nav-item active">
+    <li class="nav-item {{Request::segment(2)=='dashboard'?'active':''}}">
         <a class="nav-link" href="{{route('admin.dashboard')}}">
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>Dashboard</span></a>
@@ -28,8 +28,18 @@
 
     <li class="nav-item {{Request::segment(2)=='school'?'active':''}}">
         <a class="nav-link" href="{{route('admin.school.index')}}">
-        <i class="fas fa-user-friends"></i>
+        <i class="fas fa-school"></i>
         <span>Schools</span></a>
+    </li>
+    <li class="nav-item {{Request::segment(2)=='page'?'active':''}}">
+        <a class="nav-link" href="{{route('admin.page.index')}}">
+        <i class="fas fa-pager"></i>
+        <span>Pages</span></a>
+    </li>
+    <li class="nav-item {{Request::segment(2)=='advertisement'?'active':''}}">
+        <a class="nav-link" href="{{route('admin.advertisement.index')}}">
+        <i class="fas fa-ad"></i>
+        <span>Advertisement</span></a>
     </li>
    
 

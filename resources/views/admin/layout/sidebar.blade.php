@@ -3,7 +3,7 @@
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
         <div class="sidebar-brand-icon rotate-n-15">
-        <i class="fas fa-laugh-wink"></i>
+            <img src="{{asset('images/logo.png')}}" alt="" width="100px">
         </div>
         <div class="sidebar-brand-text mx-3">{{Auth::guard('school')->user()->name }}<sup></sup></div>
     </a>

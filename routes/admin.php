@@ -28,3 +28,27 @@ Route::middleware('superadmin')->group(static function(){
     });
 });
 
+Route::middleware('superadmin')->group(static function(){
+    Route::prefix('admin')->namespace('Admin')->name('admin.')->group(static function(){
+        Route::get('/page','PageController@index')->name('page.index');
+        Route::get('/page/create','PageController@create')->name('page.create');
+        Route::post('/page','PageController@store')->name('page.save');
+        Route::post('/page/fileupload','PageController@fileUpload')->name('page.image.upoad');
+        Route::get('/page/edit/{page}','PageController@edit')->name('page.edit');
+        Route::post('/page/{page}','PageController@update')->name('page.update');
+        Route::get('/page/delete/{page}','PageController@destroy')->name('page.delete');
+        
+    });
+});
+
+Route::middleware('superadmin')->group(static function(){
+    Route::prefix('admin')->namespace('Admin')->name('admin.')->group(static function(){
+        Route::get('/advertisement','AdvertisementController@index')->name('advertisement.index');
+        Route::get('/advertisement/create','AdvertisementController@create')->name('advertisement.create');
+        Route::post('/advertisement','AdvertisementController@store')->name('advertisement.save');
+        Route::get('/advertisement/edit/{advertisement}','AdvertisementController@edit')->name('advertisement.edit');
+        Route::post('/advertisement/{advertisement}','AdvertisementController@update')->name('advertisement.update');
+        Route::get('/advertisement/delete/{advertisement}','AdvertisementController@destroy')->name('advertisement.delete');
+    });
+});
+

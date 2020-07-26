@@ -19,7 +19,7 @@
                             <span class="border-right"><i class="fas fa-desktop p-r-5"></i>Request a demo</span>
                             <span class="border-right"><i class="fas fa-book-reader p-r-5"></i>Resouces</span>
                             <span class="border-right"><i class="fas fa-info-circle p-r-5"></i>Request a demo</span>
-                            <span class="border-right"><img class="img img-responsive fav-icon p-r-5" src="images/icons8-usa-48.png"> language</span>
+                            <span class="border-right"><img class="img img-responsive fav-icon p-r-5" src="{{asset('images/icons8-usa-48.png')}}"> language</span>
                         </a>
                     </div>
                 </div>
@@ -31,7 +31,7 @@
                 <div class="row  no-gutters">
                     <div class="col-md-2 col-xl-2 col-lg-2 logo-img">
                         <a href="/">
-                            <img src="images/logo.png" alt="">
+                            <img src="{{asset('images/logo.png')}}" alt="">
                         </a>
 
                     </div>
@@ -57,12 +57,12 @@
                     <div class="col-xl-4 col-lg-4 d-none d-lg-block">
                         <ul class="cart-div ">
                             <li>
-                                <a href="#">
+                                <a href="{{route('school.login')}}">
                                     <button class="btn btn-outline-primary btn-rounded "><i class="fas fa-user p-r-5"></i> Sign In</button>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="{{route('school.register')}}">
                                     <button class="btn btn-danger btn-rounded lyceex-danger"><i class="fas fa-sign-in-alt p-r-5"></i>Sign Up, Its Free</button>
 
                                 </a>
