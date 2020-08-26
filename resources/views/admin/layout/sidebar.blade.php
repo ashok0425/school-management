@@ -14,8 +14,8 @@
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
         <a class="nav-link" href="{{route('admin.dashboard')}}">
-        <i class="fas fa-fw fa-tachometer-alt"></i>
-        <span>Dashboard</span></a>
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Dashboard</span></a>
     </li>
 
     <!-- Divider -->
@@ -28,37 +28,46 @@
 
     <li class="nav-item {{Request::segment(2)=='dashboard'?'active':''}} {{Request::segment(2)=='teacher'?'active':''}}">
         <a class="nav-link " href="{{route('school.dashboard')}}">
-        <i class="fas fa-chalkboard-teacher"></i>
-        <span>Teacher</span></a>
+            <i class="fas fa-chalkboard-teacher"></i>
+            <span>Teacher</span></a>
     </li>
     <li class="nav-item {{Request::segment(2)=='level'?'active':''}}">
         <a class="nav-link }" href="{{route('school.level')}}">
-        <i class="fas fa-layer-group"></i>
-        <span>Level</span></a>
+            <i class="fas fa-layer-group"></i>
+            <span>Level</span></a>
     </li>
     <li class="nav-item {{Request::segment(2)=='class'?'active':''}}">
         <a class="nav-link " href="{{route('school.class')}}">
-        <i class="fas fa-users"></i>
-        <span>Class</span></a>
+            <i class="fas fa-users"></i>
+            <span>Class</span></a>
     </li>
     <li class="nav-item {{Request::segment(2)=='section'?'active':''}}">
         <a class="nav-link " href="{{route('school.section')}}">
-        <i class="fas fa-layer-group"></i>
-        <span>Section</span></a>
+            <i class="fas fa-layer-group"></i>
+            <span>Section</span></a>
     </li>
     <li class="nav-item {{Request::segment(2)=='subject'?'active':''}}">
         <a class="nav-link " href="{{route('school.subject')}}">
-        <i class="far fa-closed-captioning"></i>
-        <span>Subject</span></a>
+            <i class="far fa-closed-captioning"></i>
+            <span>Subject</span></a>
     </li>
     <li class="nav-item {{Request::segment(2)=='student'?'active':''}}">
         <a class="nav-link " href="{{route('school.student')}}">
-        <i class="fas fa-user-friends"></i>
-        <span>Student</span></a>
+            <i class="fas fa-user-friends"></i>
+            <span>Student</span></a>
     </li>
-  
+    <li class="nav-item {{Request::segment(2)=='library'?'active':''}}">
+        <a class="nav-link " href="{{route('school.library')}}">
+            <i class="fas fa-book"></i>
+            <span>Library</span></a>
+    </li>
+    <li class="nav-item {{Request::segment(2)=='calendar'?'active':''}}">
+        <a class="nav-link " href="{{route('school.calendar')}}">
+            <i class="fas fa-calendar"></i>
+            <span>Calendar</span></a>
+    </li>
 
-    
+
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
 
@@ -67,4 +76,4 @@
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
     </div>
 
-    </ul>
+</ul>

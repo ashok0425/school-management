@@ -8,6 +8,6 @@
     <br/>
         Your registered email-id is {{$school['email']}} , Please click on the below link to verify your email account
     <br/>
-    <a href="{{url('/verify', $school->verifySchool->token)}}">Verify Email</a>
+    <a href="{{url('/school/verify', $school->verifySchool->token)}}">Verify Email</a>
   </body>
 </html>

@@ -7,20 +7,20 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class VerifySchoolMail extends Mailable
+class VerifyStudentsMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $school;
+    public $student;
 
     /**
      * Create a new message instance.
      *
-     * @return void
+     * @param $student
      */
-    public function __construct($school)
+    public function __construct($student)
     {
-        $this->school = $school;
+        $this->student = $student;
     }
 
     /**
@@ -30,6 +30,6 @@ class VerifySchoolMail extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.verifyschool');
+        return $this->view('mail.verifystudents');
     }
 }
