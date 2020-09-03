@@ -15,13 +15,13 @@
                     <h6 class="m-0 font-weight-bold text-primary pt-2">Library Books Status</h6>
                     <div class="float-right">
                         <a href="{{route('school.category')}}" class="btn btn-primary pull-right mr-2">
-                            Add Category
+                            <i class="fas fa-book pr-2"></i>  Add Category
                         </a>
                         <a href="{{route('school.books')}}" class="btn btn-primary pull-right mr-2">
-                            Add Books
+                            <i class="fas fa-book-medical pr-2"></i> Add Books
                         </a>
                         <a href="{{route('school.assignbooks')}}" class="btn btn-primary pull-right float-right">
-                            Assign Books
+                            <i class="fas fa-book-reader pr-2"></i>Assign Books
                         </a>
                     </div>
                 </div>

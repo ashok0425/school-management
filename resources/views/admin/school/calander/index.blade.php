@@ -59,7 +59,9 @@
                                 </div>
                             </div>
                             <div class="mt-4">
-                                <button type="submit" class="btn btn-primary"> Add Event</button>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-plus pr-2"></i>
+                                    Add Event</button>
                             </div>
                         </div>
                     </form>

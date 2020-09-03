@@ -15,11 +15,12 @@
                     <h6 class="m-0 font-weight-bold text-primary pt-2">Students Data</h6>
                     <div class="float-right">
                         <a href="{{ asset('/sample.xlsx') }}" class="btn btn-primary pull-right mr-2" download>
-                            Download sample
+                            <i class="fas fa-download pr-2"></i> Download sample
                         </a>
-                        <a href="#" class="btn btn-primary pull-right mr-2" data-toggle="modal" data-target="#myModal">Upload
-                            File</a>
-                        <a href="{{route('school.student.create')}}" class="btn btn-primary pull-right float-right">Create
+                        <a href="#" class="btn btn-primary pull-right mr-2" data-toggle="modal" data-target="#myModal">
+                            <i class="fas fa-upload pr-2"></i> Upload File</a>
+                        <a href="{{route('school.student.create')}}" class="btn btn-primary pull-right float-right">
+                            <i class="fas fa-plus pr-2"></i>Create
                             Student</a>
                     </div>
                 </div>

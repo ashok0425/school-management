@@ -7,7 +7,8 @@
           <div class="card shadow mb-4">
             <div class="card-header py-3 d-flex justify-content-between">
               <h6 class="m-0 font-weight-bold text-primary pt-2">Subjects Data</h6>
-              <a href="{{route('school.subject.create')}}"  class="btn btn-primary pull-right float-right">Create Subject</a>
+              <a href="{{route('school.subject.create')}}"  class="btn btn-primary pull-right float-right">
+                  <i class="fas fa-plus pr-2"></i>Create Subject</a>
             </div>
             <div class="card-body">
 
