@@ -1,13 +1,15 @@
 <?php
 
-Route::prefix('')->namespace('School')->name('school.')->group(static function () {
+use App\Http\Controllers\School\AssignTeacherController;
+
+Route::prefix('school')->namespace('School')->name('school.')->group(static function () {
     Route::get('/login', 'LoginController@index')->name('login');
     Route::post('/login', 'LoginController@login')->name('login.submit');
     Route::get('/logout', 'LoginController@logout')->name('logout');
     Route::get('/register', 'LoginController@showForm')->name('register');
     Route::post('/register', 'LoginController@store')->name('register');
     Route::post('/resendverification', 'LoginController@resendVerifyLink')->name('resendverfication');
-    Route::get('/verify/{token}', 'LoginController@verifyUser');
+    Route::get('/verify/{token}', 'LoginController@verifyUser')->name('verify');
     Route::get('/forgotpassword', 'LoginController@forgotPassword')->name('forgotpassword');
     Route::post('/forgotpassword', 'LoginController@forgotPasswordSendEmail')->name('forgotpassword');
     Route::get('/new-password/{token}', 'LoginController@verifyResetLink')->name('resetpassword');
@@ -23,6 +25,15 @@ Route::middleware('school')->group(static function () {
         Route::post('/change-password', 'DashboardController@changePassword')->name('change.password');
         Route::get('/change-password', 'DashboardController@changePasswordForm')->name('change.password');
         Route::patch('/toogleteacher/{teacher}', 'TeacherController@toggleStatus')->name('toogle.status');
+
+        //assign teacher
+        Route::get('/assign-teacher/create', 'AssignTeacherController@create')->name('assignteacher.create');
+        Route::post('/assign-teacher/store', 'AssignTeacherController@store')->name('assignteacher.store');
+
+        //assign student
+        Route::get('/assign-student/create', 'AssignStudentController@create')->name('assignstudent.create');
+        Route::post('/assign-student/store', 'AssignStudentController@store')->name('assignstudent.store');
+
     });
 });
 

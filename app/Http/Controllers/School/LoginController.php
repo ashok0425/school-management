@@ -150,9 +150,9 @@ class LoginController extends Controller
                 'message' => 'Sorry your email cannot be identified.', 
                 'alert-type' => 'error'
                 );
-            return redirect('/login')->with($notification);
+            return redirect('school/login')->with($notification);
         }
-        return redirect('/login')->with($notification);
+        return redirect('school/login')->with($notification);
        
     }
 

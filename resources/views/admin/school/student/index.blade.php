@@ -14,6 +14,8 @@
                 <div class="card-header py-3 d-flex justify-content-between">
                     <h6 class="m-0 font-weight-bold text-primary pt-2">Students Data</h6>
                     <div class="float-right">
+                        <a href="{{route('school.assignstudent.create')}}" class="btn btn-primary pull-right mr-2">
+                            <i class="fas fa-plus pr-2"></i> Assign Student Username and Password</a>
                         <a href="{{ asset('/sample.xlsx') }}" class="btn btn-primary pull-right mr-2" download>
                             <i class="fas fa-download pr-2"></i> Download sample
                         </a>
