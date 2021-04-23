@@ -11,6 +11,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Student;
 use App\Models\Klass;
 use App\Models\Section;
+use App\Models\School;
 use Auth;
 use Hash;
 use Illuminate\Http\Response;
@@ -21,16 +22,22 @@ use Excel;
 
 class StudentController extends Controller
 {
+    
+    public function filterStudent(Request $request) {
+        $students = Student::where('class_id', '=', $request->class)->get();
+        $classes = Klass::get();
+        return view('admin.school.student.index', compact('students', 'classes'));
+    }
     /**
      * Display a listing of the resource.
      *
      * @return Factory|Application|Response|View
      */
-    public function index()
+    public function index(Request $request)
     {
+        $classes = Klass::get();
         $students = Student::where('school_id', Auth::guard('school')->user()->id)->get();
-
-        return view('admin.school.student.index', compact('students'));
+        return view('admin.school.student.index', compact('students', 'classes'));
     }
 
     /**
@@ -80,7 +87,7 @@ class StudentController extends Controller
                 $path = $file->storeAs('student-image', $filename);
                 $student->image = $path;
             }
-            $student->save();
+            // $student->save();
             $student->password = Hash::make(date("Y") . $request->class . $request->section . $student->id);
             $student->save();
             $notification = array(
@@ -115,8 +122,10 @@ class StudentController extends Controller
      * @param int $id
      * @return Response
      */
-    public function edit($id)
+    public function edit()
     {
+        $params = __decryptToken();
+        $id = $params->id;
         $klasses = Klass::with('sections')->where('school_id', Auth::guard('school')->user()->id)->get();
         $student = Student::where('school_id', '=', Auth::guard('school')->user()->id)->where('id', $id)->first();
 
@@ -194,8 +203,10 @@ class StudentController extends Controller
      * @param int $id
      * @return Response
      */
-    public function destroy($id)
+    public function destroy()
     {
+        $params = __decryptToken();
+        $id = $params->id;
         $student = Student::where('school_id', Auth::guard('school')->user()->id)->where('id', $id)->first();
         if (!$student) {
             $notification = array(
@@ -243,9 +254,9 @@ class StudentController extends Controller
                 'message' => 'Sorry your email cannot be identified.',
                 'alert-type' => 'error'
             );
-            return redirect('/login')->with($notification);
+            return redirect()->route('school.login')->with($notification);
         }
-        return redirect('/login')->with($notification);
+        return redirect()->route('school.login')->with($notification);
     }
 
     public function uploadExcel(Request $request)
@@ -280,5 +291,18 @@ class StudentController extends Controller
             'alert-type' => 'error'
         );
         return redirect()->back()->with($notification);
+    }
+
+    public function toggleStatusStudent(Request $request) 
+    {
+         $student = new Student;
+        if($request->ajax()) {
+             $data = ($request->status == "true") ?  $student->blocked($request->id): $student->unblocked($request->id);
+        }
+         $response = [
+        'alert-type' => 'success',
+        'message' => $data['name'].' is successfully '. ($data['status'] ? 'blocked': 'unblocked.'),
+    ];
+    return response()->json($response);
     }
 }

@@ -44,9 +44,12 @@ class LevelController extends Controller
 
     }
 
-    public function edit( $level){
+    public function edit(){
+        $params = __decryptToken();
+        $id = $params->id;
         try{
-            $level = Level::where('school_id' ,Auth::guard('school')->user()->id)->where('id',$level)->first();
+            $level = new Level;
+            $level = Level::where('school_id' ,Auth::guard('school')->user()->id)->where('id',$id)->first();
             if($level){
                 return view('admin.school.level.edit-form',compact('level')); 
             }else{
@@ -93,9 +96,12 @@ class LevelController extends Controller
         }
     }
 
-    public function destroy(Level $level){
+    public function destroy(){
+        $params = __decryptToken();
+        $id = $params->id;
         try{
-            $level = Level::where('school_id',Auth::guard('school')->user()->id)->where('id','=',$level->id)->first();
+            $level = new Level;
+            $level = Level::where('school_id',Auth::guard('school')->user()->id)->where('id','=',$id)->first();
             if($level){
                 $level->delete();
                 $notification = array(

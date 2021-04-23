@@ -97,6 +97,8 @@ class SchoolController extends Controller
      */
     public function edit(School $school)
     {
+        $params = __decryptToken();
+        dd($params);
         return view('admin.admin.school.edit-form',compact('school'));
     }
 
@@ -158,8 +160,12 @@ class SchoolController extends Controller
      */
     public function destroy(School $school)
     {
+        $params = __decryptToken();
+        $id = $params->id;
+        
         try{
-            $school->delete();
+            $school = new School;
+            $school->destroy($id);
             $notification = array(
                 'message' => 'School Deleted Successfully', 
                 'alert-type' => 'success'

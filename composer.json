@@ -24,7 +24,12 @@
         ],
         "psr-4": {
             "App\\": "app/"
-        }
+        },
+        "files": [
+            "app/Helpers/helpers.php",
+            "app/Helpers/jwt_helper.php",
+            "app/Helpers/application_constants.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {

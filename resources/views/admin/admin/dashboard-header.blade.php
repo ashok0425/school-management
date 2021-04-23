@@ -48,11 +48,11 @@
         <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
         Profile
         </a>-->
-        <a class="dropdown-item" href="{{route('admin.edit.profile')}}">
+        <a class="dropdown-item" href="{{__setLink('admin/edit-profile')}}">
         <i class="fas fa-user-alt fa-sm fa-fw mr-2 text-gray-400"></i>
             Edit Profile
         </a>
-        <a class="dropdown-item" href="{{route('admin.change.password')}}">
+        <a class="dropdown-item" href="{{__setLink('admin/change-password')}}">
             <i class="fas fa-key fa-sm fa-fw mr-2 text-gray-400"></i>
             Change Password
         </a> 

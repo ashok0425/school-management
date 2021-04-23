@@ -33,6 +33,7 @@
 
     <!-- Footer -->
     @include('admin.layout.footer')
+    @yield('script');
     <!-- End of Footer -->
 
     </div>

@@ -1,5 +1,3 @@
-
-
 @push('scripts')
 @if ($errors->any())
         <ul>

@@ -14,13 +14,13 @@
                 <div class="card-header py-3 d-flex justify-content-between ">
                     <h6 class="m-0 font-weight-bold text-primary pt-2">Library Books Status</h6>
                     <div class="float-right">
-                        <a href="{{route('school.category')}}" class="btn btn-primary pull-right mr-2">
+                        <a href="{{__setLink('school/category/add')}}" class="btn btn-primary pull-right mr-2">
                             <i class="fas fa-book pr-2"></i>  Add Category
                         </a>
-                        <a href="{{route('school.books')}}" class="btn btn-primary pull-right mr-2">
+                        <a href="{{__setLink('school/books')}}" class="btn btn-primary pull-right mr-2">
                             <i class="fas fa-book-medical pr-2"></i> Add Books
                         </a>
-                        <a href="{{route('school.assignbooks')}}" class="btn btn-primary pull-right float-right">
+                        <a href="{{__setLink('school/assignbooks')}}" class="btn btn-primary pull-right float-right">
                             <i class="fas fa-book-reader pr-2"></i>Assign Books
                         </a>
                     </div>
@@ -48,7 +48,7 @@
                                 </tr>
                             @empty
                                 <tr>
-                                    <td>No Record Available</td>
+                                    <td colspan=5 >No Record Available</td>
                                 </tr>
                             @endforelse
                             </tbody>

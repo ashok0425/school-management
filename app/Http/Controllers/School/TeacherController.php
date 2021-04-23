@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 use Auth;
 use Illuminate\View\View;
+use App\Models\Klass;
+use App\Models\ClassTeacherAssignee;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Response;
+
+
 
 /**
  * Class TeacherController
@@ -20,14 +26,32 @@ use Illuminate\View\View;
  */
 class TeacherController extends Controller
 {
+    public function teacherFilter(Request $request) {
+        $this->validate($request, [
+            'class_id' => 'required',
+        ]);
+
+         $users = DB::table('teachers')
+            ->join('class_teacher_assignee', 'teachers.id', '=', 'class_teacher_assignee.teacher_id')
+            ->distinct()
+            ->where('class_id', $request->class_id)
+            ->get();
+        $classes = Klass::where('school_id', Auth::guard('school')->user()->id)->get();
+
+        return view('admin.school.teacher.index', compact('users', 'classes'));
+
+    }
+
     /**
      * @return Factory|Application|View
      */
     public function index()
     {
+
+        $classes = Klass::where('school_id', Auth::guard('school')->user()->id)->get();
         $users = Teacher::where('school_id', Auth::guard('school')->user()->id)->get();
 
-        return view('admin.school.teacher.index', compact('users'));
+        return view('admin.school.teacher.index', compact('users', 'classes'));
     }
 
     /**
@@ -48,7 +72,7 @@ class TeacherController extends Controller
             'name' => 'required',
             'email' => 'required|unique:teachers,email',
             'contact' => 'required',
-            'password' => 'required|confirmed',
+            'password' => 'required|confirmed|min:8',
             'image' => 'image|required',
         ]);
         try {
@@ -84,8 +108,10 @@ class TeacherController extends Controller
      * @param $user
      * @return Factory|Application|RedirectResponse|View
      */
-    public function edit($user)
+    public function edit()
     {
+        $params = __decryptToken();
+        $user = $params->user;
         $user = Teacher::where('school_id', '=', Auth::guard('school')->user()->id)->where('id', $user)->first();
         if (!$user) {
             $notification = array(
@@ -148,8 +174,11 @@ class TeacherController extends Controller
      * @param $user
      * @return RedirectResponse
      */
-    public function destroy($user)
+    public function destroy()
     {
+        $params = __decryptToken();
+        $user = $params->user;
+
         $teacher = Teacher::where('school_id', Auth::guard('school')->user()->id)->where('id', $user)->first();
         if (!$teacher) {
             $notification = array(
@@ -179,15 +208,18 @@ class TeacherController extends Controller
      * @param Teacher $teacher
      * @return RedirectResponse
      */
-    public function toggleStatus(Teacher $teacher)
+    public function toggleStatusTeacher(Request $request)
     {
-        request('status') ? $teacher->blocked() : $teacher->unblocked();
+        $teacher = new Teacher;
+        if($request->ajax()) {
+             $data = ($request->status == "true") ?  $teacher->blocked($request->id): $teacher->unblocked($request->id);
+        }
 
-        $notification = array(
-            'message' => 'Successfully updated status.',
-            'alert-type' => 'success'
-        );
+         $response = [
+        'alert-type' => 'success',
+        'message' => $data['name'].' is successfully '. ($data['status'] ? 'blocked': 'unblocked.'),
+    ];
+    return response()->json($response);
 
-        return redirect()->back()->with($notification);
     }
 }

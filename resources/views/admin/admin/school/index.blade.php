@@ -7,7 +7,7 @@
           <div class="card shadow mb-4">
             <div class="card-header py-3 d-flex justify-content-between">
               <h6 class="m-0 font-weight-bold text-primary pt-2">Schools Data</h6>
-              <a href="{{route('admin.school.create')}}"  class="btn btn-primary pull-right float-right">
+              <a href="{{__setLink('admin/school/create')}}"  class="btn btn-primary pull-right float-right">
                   <i class="fas fa-plus pr-2"></i>Create School</a>
             </div>
             <div class="card-body">
@@ -30,10 +30,10 @@
                         <td>{{$school->address}}</td>
                         <th>{{$school->contact}}</th>
                         <td>
-                            <a href="{{route('admin.school.edit',['school'=>$school->id])}}" class="btn btn-primary btn-circle">
+                            <a href="{{__setLink('admin/school/edit',['id'=>$school->id])}}" class="btn btn-primary btn-circle">
                               <i class="fas fa-edit"></i>
                             </a>
-                            <a href="{{route('admin.school.delete',['school'=>$school->id])}}}" class="btn btn-danger btn-circle">
+                            <a href="{{__setLink('admin/school/delete',['id'=>$school->id])}}}" class="btn btn-danger btn-circle">
                               <i class="fas fa-trash"></i>
                             </a>
                         </td>

@@ -81,11 +81,11 @@
                 <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                 Profile
                 </a>-->
-                <a class="dropdown-item" href="{{route('school.edit.profile')}}">
+                <a class="dropdown-item" href="{{__setLink('school/edit-profile')}}">
                 <i class="fas fa-school fa-sm fa-fw mr-2 text-gray-400"></i>
                 Edit School Information
                 </a>
-                <a class="dropdown-item" href="{{route('school.change.password')}}">
+                <a class="dropdown-item" href="{{__setLink('school/change-password')}}">
                 <i class="fas fa-key fa-sm fa-fw mr-2 text-gray-400"></i>
                  Change Password
                 </a> 

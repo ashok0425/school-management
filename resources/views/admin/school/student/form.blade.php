@@ -1,135 +1,135 @@
 @extends('admin.school.dashboard')
 @section('dashboard-body')
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-           @include('admin.layout.validation-error')
-            <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Create Student</h6>
-                </div>
-                <div class="card-body">
-                    <form method="post" action="{{route('school.student.save')}}" class="create-teacher" novalidate  enctype="multipart/form-data">
-                        {{csrf_field()}}
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Student Name" required="true" value="{{old('name')}}">
-                            <div class="invalid-feedback">
-                                Please provide a Student name.
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="contact">Phone No</label>
-                            <input type="contact" class="form-control" id="phonno" name="phonno" placeholder="98******" required="true" value="{{old('phonno')}}">
-                            <div class="invalid-feedback">
-                                Please provide a valid phone number.
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="contact">Gurdian No</label>
-                            <input type="contact" class="form-control" id="gurdian_no" name="gurdian_no" placeholder="98******" required="true" value="{{old('gurdian_no')}}">
-                            <div class="invalid-feedback">
-                                Please provide a valid Gurdian Contact Number.
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="contact">Address</label>
-                            <input type="contact" class="form-control" id="address" name="address" placeholder="Butwal" required="true" value="{{old('address')}}">
-                            <div class="invalid-feedback">
-                                Please provide a valid Address.
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="sel1">Select Class:</label>
-                            <select class="custom-select" id="klass" name="klass" required="true">
-                                <option data-section="[]">----Select Class----</option>
-                                @foreach($klasses as $klass)
-                                <option value="{{$klass->id}}" data-section='<?php echo json_encode($klass)?>'>{{$klass->class}}</option>
-                                @endforeach
-                            </select>
-                            <div class="invalid-feedback">
-                                Please Selec a Class.
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="sel1">Select Section:</label>
-                            <select class="custom-select" id="section" name="section" required="true">
-                                <option>----Select Section----</option>
-                            </select>
-                            <div class="invalid-feedback">
-                                Please Select a Section.
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="contact">Roll No</label>
-                            <input type="contact" class="form-control" id="roll_no" name="roll_no" placeholder="1" required="true" value="{{old('roll_no')}}">
-                            <div class="invalid-feedback">
-                                Please provide a Student Roll No.
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="student@mail.com" required="true" value="{{old('email')}}">
-                            <div class="invalid-feedback">
-                                Please provide a valid email address.
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Image</label>
-                            <input type="file" name="image" class="file file-img-preview" accept="image/*">
-                            <div class="input-group my-3">
-                                <input type="text" class="form-control" disabled placeholder="Upload File" id="file">
-                                <div class="input-group-append">
-                                    <button type="button" class="browse btn btn-primary">Browse...</button>
-                                </div>
-                                
-                            </div>
-                            <div class="ml-2 col-sm-6">
-                                    <img src="https://placehold.it/80x80" id="preview" class="img-thumbnail" style="width:80px;height:80px;">
-                            </div>
-                            
-                        </div>
-                        
-                        <button type="submit" id="submitButton" class="btn btn-primary btn-icon-split">
-                            <span class="icon text-white-50">
-                            <i class="fas fa-check"></i>
-                            </span>
-                            <span class="text">Save</span>
-                        </button>
-                    </form>
+ @include('admin.layout.validation-error')
+ <div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Create Student</h6>
+    </div>
+    <div class="card-body">
+        <form method="post" action="{{route('school.student.save')}}" class="create-teacher" novalidate  enctype="multipart/form-data">
+            {{csrf_field()}}
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Student Name" required="true" value="{{old('name')}}">
+                <div class="invalid-feedback">
+                    Please provide a Student name.
                 </div>
             </div>
-        </div>
+            <div class="form-group">
+                <label for="contact">Phone No</label>
+                <input type="contact" class="form-control" id="phonno" name="phonno" placeholder="98******" required="true" value="{{old('phonno')}}">
+                <div class="invalid-feedback">
+                    Please provide a valid phone number.
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="contact">Gurdian No</label>
+                <input type="contact" class="form-control" id="gurdian_no" name="gurdian_no" placeholder="98******" required="true" value="{{old('gurdian_no')}}">
+                <div class="invalid-feedback">
+                    Please provide a valid Gurdian Contact Number.
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="contact">Address</label>
+                <input type="contact" class="form-control" id="address" name="address" placeholder="Butwal" required="true" value="{{old('address')}}">
+                <div class="invalid-feedback">
+                    Please provide a valid Address.
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="sel1">Select Class:</label>
+                <select class="custom-select" id="klass" name="klass" required="true">
+                    <option data-section="[]">----Select Class----</option>
+                    @foreach($klasses as $klass)
+                    <option value="{{$klass->id}}" data-section='<?php echo json_encode($klass)?>'>{{$klass->class}}</option>
+                    @endforeach
+                </select>
+                <div class="invalid-feedback">
+                    Please Selec a Class.
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="sel1">Select Section:</label>
+                <select class="custom-select" id="section" name="section" required="true">
+                    <option>----Select Section----</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please Select a Section.
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="contact">Roll No</label>
+                <input type="contact" class="form-control" id="roll_no" name="roll_no" placeholder="1" required="true" value="{{old('roll_no')}}">
+                <div class="invalid-feedback">
+                    Please provide a Student Roll No.
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="student@mail.com" required="true" value="{{old('email')}}">
+                <div class="invalid-feedback">
+                    Please provide a valid email address.
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Image</label>
+                <input type="file" name="image" class="file file-img-preview" accept="image/*">
+                <div class="input-group my-3">
+                    <input type="text" class="form-control" disabled placeholder="Upload File" id="file">
+                    <div class="input-group-append">
+                        <button type="button" class="browse btn btn-primary">Browse...</button>
+                    </div>
+                    
+                </div>
+                <div class="ml-2 col-sm-6">
+                    <img src="https://placehold.it/80x80" id="preview" class="img-thumbnail" style="width:80px;height:80px;">
+                </div>
+                
+            </div>
+            
+            <button type="submit" id="submitButton" class="btn btn-primary btn-icon-split">
+                <span class="icon text-white-50">
+                    <i class="fas fa-check"></i>
+                </span>
+                <span class="text">Save</span>
+            </button>
+        </form>
+    </div>
+</div>
+</div>
 @endsection
 @push('scripts')
-   <script>
-        (function() {
-            'use strict';
-            window.addEventListener('load', function() {
+<script>
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
                 // Fetch all the forms we want to apply custom Bootstrap validation styles to
                 var forms = document.getElementsByClassName('create-teacher');
                 // Loop over them and prevent submission
                 var validation = Array.prototype.filter.call(forms, function(form) {
-                form.addEventListener('submit', function(event) {
-                    if (form.checkValidity() === false) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                    }
-                    form.classList.add('was-validated');
-                }, false);
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
                 });
             }, false);
-        })();
+    })();
 
-        $(document).on("click", ".browse", function() {
-            var file = $(this).parents().find(".file");
-            file.trigger("click");
-            });
-            $('input[type="file"]').change(function(e) {
-            var fileName = e.target.files[0].name;
-            $("#file").val(fileName);
+    $(document).on("click", ".browse", function() {
+        var file = $(this).parents().find(".file");
+        file.trigger("click");
+    });
+    $('input[type="file"]').change(function(e) {
+        var fileName = e.target.files[0].name;
+        $("#file").val(fileName);
 
-            var reader = new FileReader();
-            reader.onload = function(e) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
                 // get loaded data and render thumbnail.
                 document.getElementById("preview").src = e.target.result;
             };
@@ -137,7 +137,7 @@
             reader.readAsDataURL(this.files[0]);
         });
     </script>
-     <script>
+    <script>
         $('#klass').on('change', function (e) {
             $("#section").empty();
             // var optionSelected = $("option:selected", this);
@@ -153,4 +153,4 @@
             
         });
     </script>
-@endpush
+    @endpush

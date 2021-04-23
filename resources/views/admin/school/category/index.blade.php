@@ -156,7 +156,7 @@
                 $.ajax({
                     url: '/school/category/update/' + id,
                     data: $('#js-update').serialize(),
-                    type: 'PATCH',
+                    type: 'POST',
                     success: function (data) {
                         $('#message').html('<div id="toast-container" class="toast-top-right"><div class="toast toast-success" aria-live="polite" > <div class="toast-message">Updated Successfully.</div> </div> </div>');
                         // Diplay message with a fadeout

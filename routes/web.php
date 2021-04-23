@@ -31,7 +31,7 @@ Route::get('/terms-and-conditions', function () {
     return view('website.termsandconditions');
 });
 
-Route::get('/login','Admin\LoginController@logout')->name('login');
+// Route::get('/login','Admin\LoginController@logout')->name('login');
 
 Route::get('/logout','Admin\LoginController@logout')->name('logout');
 

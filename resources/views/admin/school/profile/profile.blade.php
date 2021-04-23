@@ -4,12 +4,19 @@
             @include('admin.layout.validation-error')
             <div class="card shadow mb-4">
                 <div class="card-header py-3 d-flex justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Change Password</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">School Information</h6>
                    
                 </div>
                 <div class="card-body">
                     <form method="post" action="{{route('school.edit.profile')}}" class="change-password" novalidate enctype="multipart/form-data" >
                         {{csrf_field()}}
+                       <!--  <div class="form-group">
+                            <label for="level">Claim Your Public URL</label>
+                            <input type="text" class="form-control" id="public_url" name="public_url" placeholder="Enter Your Public URL" required="true" value="">
+                            <div class="invalid-feedback">
+                                Please provide your public URL.
+                            </div>
+                        </div> -->
                         <div class="form-group">
                             <label for="level">School Name</label>
                             <input type="text" class="form-control" id="name" name="name" placeholder="Eneter School Name" required="true" value="{{$school->name}}">
@@ -60,7 +67,7 @@
                                 Please provide a School Logo.
                             </div>
                             @if($school->logo)
-                                <img id="preview_img" src="{{$school->logo}}" class="" width="100" height="100"/>
+                                <img id="preview_img" src="{{ asset('/storage') . '/' . Auth::guard('school')->user()->logo }}" class="" width="100" height="100"/>
                             @else
                                 <img id="preview_img" src="https://via.placeholder.com/150" class="" width="100" height="100"/>
                             @endif

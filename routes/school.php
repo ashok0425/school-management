@@ -19,12 +19,19 @@ Route::prefix('school')->namespace('School')->name('school.')->group(static func
 
 Route::middleware('school')->group(static function () {
     Route::prefix('school')->namespace('School')->name('school.')->group(static function () {
-        Route::get('/dashboard', 'TeacherController@index')->name('dashboard');
+
+        Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+        Route::get('/teacher', 'TeacherController@index')->name('teacher');
+
         Route::get('/edit-profile', 'DashboardController@editProfile')->name('edit.profile');
         Route::post('/edit-profile', 'DashboardController@updateProfile')->name('edit.profile');
         Route::post('/change-password', 'DashboardController@changePassword')->name('change.password');
         Route::get('/change-password', 'DashboardController@changePasswordForm')->name('change.password');
-        Route::patch('/toogleteacher/{teacher}', 'TeacherController@toggleStatus')->name('toogle.status');
+
+        Route::post('/toogleteacher', 'TeacherController@toggleStatusTeacher')->name('toogle.status.teacher');
+        
+        Route::post('/togglestudent', 'StudentController@toggleStatusStudent')->name('toogle.status.student'); 
+
 
         //assign teacher
         Route::get('/assign-teacher/create', 'AssignTeacherController@create')->name('assignteacher.create');
@@ -42,9 +49,11 @@ Route::middleware('school')->group(static function () {
         Route::get('/teacher', 'TeacherController@index')->name('teacher');
         Route::get('/teacher/create', 'TeacherController@show')->name('teacher.create');
         Route::post('/teacher/save', 'TeacherController@store')->name('teacher.save');
-        Route::get('/teacher/edit/{user}', 'TeacherController@edit')->name('teacher.edit');
+        Route::get('/teacher/edit', 'TeacherController@edit')->name('teacher.edit');
         Route::post('/teacher/update/{user}', 'TeacherController@update')->name('teacher.update');
-        Route::get('/teacher/delete/{user}', 'TeacherController@destroy')->name('teacher.delete');
+        Route::get('/teacher/delete', 'TeacherController@destroy')->name('teacher.delete');
+
+        Route::post('/teacher/filter', 'TeacherController@teacherFilter')->name('teacher.filter');
     });
 });
 
@@ -53,9 +62,9 @@ Route::middleware('school')->group(static function () {
         Route::get('/level', 'LevelController@index')->name('level');
         Route::get('/level/create', 'LevelController@show')->name('level.create');
         Route::post('/level/save', 'LevelController@store')->name('level.save');
-        Route::get('/level/edit/{level}', 'LevelController@edit')->name('level.edit');
+        Route::get('/level/edit', 'LevelController@edit')->name('level.edit');
         Route::post('/level/update/{level}', 'LevelController@update')->name('level.update');
-        Route::get('/level/delete/{level}', 'LevelController@destroy')->name('level.delete');
+        Route::get('/level/delete', 'LevelController@destroy')->name('level.delete');
     });
 });
 
@@ -64,9 +73,18 @@ Route::middleware('school')->group(static function () {
         Route::get('/class', 'KlassController@index')->name('class');
         Route::get('/class/create', 'KlassController@show')->name('class.create');
         Route::post('/class/save', 'KlassController@store')->name('class.save');
-        Route::get('/class/edit/{klass}', 'KlassController@edit')->name('class.edit');
-        Route::post('/class/update/{klass}', 'KlassController@update')->name('class.update');
-        Route::get('/class/delete/{klass}', 'KlassController@destroy')->name('class.delete');
+        Route::get('/class/edit', 'KlassController@edit')->name('class.edit');
+        Route::post('/class/update/{class}', 'KlassController@update')->name('class.update');
+        Route::get('/class/delete', 'KlassController@destroy')->name('class.delete');
+
+
+        Route::get('/assignClassTeacher', 'KlassController@assignClassTeacher')->name('assignClassTeacher');
+
+        Route::get('/routine/list', 'RoutineController@index')->name('routine');
+        Route::get('/routine/create/view', 'RoutineController@create')->name('create.routine');
+        Route::post('/routine/add', 'RoutineController@store')->name('routine.add');
+        Route::post('/getSectionFromClass', 'RoutineController@getSectionFromClass')->name('getSectionFromClass');
+        Route::post('/school/routine/by/filter', 'RoutineController@getSchoolRoutineByClassAndSection')->name('routine.by.filter');
     });
 });
 
@@ -75,7 +93,7 @@ Route::middleware('school')->group(static function () {
         Route::get('/section', 'SectionController@index')->name('section');
         Route::get('/section/create', 'SectionController@show')->name('section.create');
         Route::post('/section/save', 'SectionController@store')->name('section.save');
-        Route::get('/section/edit/{section}', 'SectionController@edit')->name('section.edit');
+        Route::get('/section/edit', 'SectionController@edit')->name('section.edit');
         Route::post('/section/update/{section}', 'SectionController@update')->name('section.update');
         Route::get('/section/delete/{section}', 'SectionController@destroy')->name('section.delete');
     });
@@ -86,23 +104,29 @@ Route::middleware('school')->group(static function () {
         Route::get('/subject', 'SubjectController@index')->name('subject');
         Route::get('/subject/create', 'SubjectController@show')->name('subject.create');
         Route::post('/subject/save', 'SubjectController@store')->name('subject.save');
-        Route::get('/subject/edit/{subject}', 'SubjectController@edit')->name('subject.edit');
-        Route::post('/subject/update/{subject}', 'SubjectController@update')->name('subject.update');
-        Route::get('/subject/delete/{subject}', 'SubjectController@destroy')->name('subject.delete');
+        Route::get('/subject/edit', 'SubjectController@edit')->name('subject.edit');
+        Route::post('/subject/update', 'SubjectController@update')->name('subject.update');
+        Route::get('/subject/delete', 'SubjectController@destroy')->name('subject.delete');
+
+        Route::get('subject/assignSubjectTeacher', 'SubjectController@assignSubjectTeacher')->name('subject.assignSubjectTeacher');
+        Route::post('/subject/insertSubjectTeacher', 'SubjectController@insertSubjectTeacher')->name('subject.insertSubjectTeacher');
     });
 });
+
 
 Route::middleware('school')->group(static function () {
     Route::prefix('school')->namespace('School')->name('school.')->group(static function () {
         Route::get('/student', 'StudentController@index')->name('student');
         Route::get('/student/create', 'StudentController@create')->name('student.create');
         Route::post('/student/save', 'StudentController@store')->name('student.save');
-        Route::get('/student/edit/{student}', 'StudentController@edit')->name('student.edit');
+        Route::get('/student/edit', 'StudentController@edit')->name('student.edit');
         Route::post('/student/update/{student}', 'StudentController@update')->name('student.update');
-        Route::get('/student/delete/{student}', 'StudentController@destroy')->name('student.delete');
+        Route::get('/student/delete', 'StudentController@destroy')->name('student.delete');
         Route::get('/verify/students/{token}', 'StudentController@verifyStudents');
 
         Route::post('/uploadexcel','StudentController@uploadExcel')->name('upload');
+
+        Route::post('/student/filter', 'StudentController@filterStudent')->name('student.filter');
     });
 });
 
@@ -114,13 +138,13 @@ Route::middleware('school')->group(static function () {
         Route::get('/books', 'BooksController@index')->name('books');
         Route::post('/books/add', 'BooksController@store')->name('books.add');
         Route::get('/books/edit/{books}', 'BooksController@edit')->name('books.edit');
-        Route::patch('/books/update/{books}', 'BooksController@update')->name('books.update');
+        Route::post('/books/update/{books}', 'BooksController@update')->name('books.update');
         Route::delete('/books/delete/{books}', 'BooksController@destroy')->name('books.delete');
 
         //Category Controller
         Route::get('/category/add', 'CategoryController@index')->name('category');
         Route::post('/category/store', 'CategoryController@store')->name('category.save');
-        Route::patch('/category/update/{categories}', 'CategoryController@update')->name('category.update');
+        Route::post('/category/update/{categories}', 'CategoryController@update')->name('category.update');
         Route::delete('/category/delete/{categories}', 'CategoryController@destroy')->name('category.delete');
 
         //Assign Books Controller
@@ -134,5 +158,6 @@ Route::middleware('school')->group(static function () {
 
     });
 });
+
 
 

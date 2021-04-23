@@ -10,12 +10,12 @@
         </style>
     @endpush
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-auto">
-        @if(Session::has('success'))
+        <!-- @if(Session::has('success'))
             toastr.success("{{ Session::get('success') }}");
         @endif
         @if(Session::has('error'))
             toastr.warning("{{ Session::get('error') }}");
-        @endif
+        @endif -->
     </div>
     <div class="card shadow mb-4">
         <div class="card-header py-3 d-flex justify-content-between">
@@ -27,13 +27,13 @@
                     <form action="{{route('school.calendar.add')}}" method="post">
                         {{ csrf_field() }}
                         <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12">
+                         <!--    <div class="col-xs-12 col-sm-12 col-md-12">
                                 @if (Session::has('success'))
                                     <div class="alert alert-success">{{ Session::get('success') }}</div>
                                 @elseif (Session::has('warnning'))
                                     <div class="alert alert-danger">{{ Session::get('warnning') }}</div>
                                 @endif
-                            </div>
+                            </div> -->
                             <div class="col-xs-4 col-sm-4 col-md-4">
                                 <div class="form-group">
                                     <label for="">Event Name:</label>

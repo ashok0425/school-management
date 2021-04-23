@@ -46,9 +46,11 @@ class SectionController extends Controller
 
     }
 
-    public function edit( $section){
+    public function edit( ){
+        $params = __decryptToken();
+        $id = $params->id;
         $classes = Klass::where('school_id',Auth::guard('school')->user()->id)->get();
-        $section = Section::where('school_id',Auth::guard('school')->user()->id)->where('id',$section)->first();
+        $section = Section::where('school_id',Auth::guard('school')->user()->id)->where('id',$id)->first();
         if($section)
             return view('admin.school.section.edit-form',compact('section','classes'));
         else{

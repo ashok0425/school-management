@@ -17,6 +17,10 @@
     <!-- Custom styles for this template-->
     <link href="{{asset('admin/css/sb-admin-2.css')}}" rel="stylesheet">
     <link href="{{asset('admin/css/lyceex-admin.css')}}" rel="stylesheet">
+    <script src="{{asset('admin/vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{asset('js/bootbox.all.min.js')}}"></script>
+    <script src="{{asset('js/bootbox.locales.min.js')}}"></script>
+    <script src="{{asset('js/bootbox.min.js')}}"></script>
     @stack('links')
 </head>
 
@@ -26,7 +30,6 @@
 @yield('content')
 
 <!-- Bootstrap core JavaScript-->
-<script src="{{asset('admin/vendor/jquery/jquery.min.js')}}"></script>
 <script src="{{asset('admin/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
 <!-- Core plugin JavaScript-->

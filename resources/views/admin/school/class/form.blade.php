@@ -9,7 +9,7 @@
                     <h6 class="m-0 font-weight-bold text-primary">Create Class</h6>
                 </div>
                 <div class="card-body">
-                    <form method="post" action="{{route('school.class.save')}}" class="class" novalidate >
+                    <form method="post" action="{{__setLink('school/class/save')}}" class="class" novalidate >
                     {{csrf_field()}}
                         <div class="form-group">
                             <label for="level">Class</label>

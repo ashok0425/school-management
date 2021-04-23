@@ -9,7 +9,7 @@
                     <h6 class="m-0 font-weight-bold text-primary">Edit Class: {{$klass->class}}</h6>
                 </div>
                 <div class="card-body">
-                    <form method="post" action="{{route('school.class.update',['klass'=>$klass->id])}}" class="class" novalidate >
+                    <form method="post" action="{{route('school.class.update',['class'=>$klass->id])}}" class="class" novalidate >
                     {{csrf_field()}}
                         <div class="form-group">
                             <label for="level">Class</label>

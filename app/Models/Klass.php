@@ -17,6 +17,10 @@ class Klass extends Model
         return $this->hasMany('App\Models\Section','class_id');
     }
 
+    public function classTeacherAssignee(){
+    	return $this->hasMany('App\Models\classTeacherAssignee', 'class_id');
+    }
+
     
 
     

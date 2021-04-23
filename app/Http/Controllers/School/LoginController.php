@@ -13,6 +13,7 @@ use App\Mail\ForgotPasswordMail;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Hash;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
 
 class LoginController extends Controller
 {
@@ -33,7 +34,7 @@ class LoginController extends Controller
        
         if($authenticate){
            
-           return redirect('/school/dashboard');
+           return redirect(__setLink('school/dashboard'));
         }else{
             $notification = array(
                 'message' => 'Username and password did not match', 
@@ -45,24 +46,34 @@ class LoginController extends Controller
 
     public function showForm()
     {
-        return view('website.school.register');
+        $countries = DB::table('countries')->get();
+
+        return view('website.school.register', compact('countries'));
     }
+    
     public function store(Request $request)
     {
+
         $this->validate($request,[
             'name'=>'required|string|max:191',
             'address'=>'required|string|max:191',
-            'logo'=>'required|image',
+            'country' => 'required',
+            'logo'=>'required|mimes:jpeg,jpg,png',
             'panno'=>'required',
             'contact'=>'required',
-            'email'=>'required',
+            'email'=>'required|email|unique:schools,email',
             'school_motto'=>'required|string',
             'password'=>'confirmed|min:6|string|required'
         ]);
+
         try{
+            $country = explode(',', $request->country);
             $school = new School;
             $school->name = $request->name;
             $school->address = $request->address;
+            $school->country_id = $country[0];
+            $school->country_short_code = $country[1];
+            $school->country_name = $country[2];
             $school->panno = $request->panno;
             $school->contact = $request->contact;
             $school->email = $request->email;
@@ -73,6 +84,7 @@ class LoginController extends Controller
             $filename =  time().'-'.mt_rand(0,100000) . '.' . $file->getClientOriginalExtension();
             $path = $file->storeAs('school-logo', $filename);
             $school->logo = $path;
+
             $school->save();
             $notification = array(
                 'message' => 'School Registered Successfully! We have sent email for confirmation. Please check your registered mail', 

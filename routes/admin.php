@@ -22,9 +22,9 @@ Route::middleware('superadmin')->group(static function(){
         Route::get('/school','SchoolController@index')->name('school.index');
         Route::get('/school/create','SchoolController@create')->name('school.create');
         Route::post('/school','SchoolController@store')->name('school.save');
-        Route::get('/school/{school}','SchoolController@edit')->name('school.edit');
+        Route::get('/school/edit','SchoolController@edit')->name('school.edit');
         Route::post('/school/{school}','SchoolController@update')->name('school.update');
-        Route::get('/school/delete/{school}','SchoolController@destroy')->name('school.delete');
+        Route::get('/school/delete','SchoolController@destroy')->name('school.delete');
     });
 });
 
@@ -34,9 +34,9 @@ Route::middleware('superadmin')->group(static function(){
         Route::get('/page/create','PageController@create')->name('page.create');
         Route::post('/page','PageController@store')->name('page.save');
         Route::post('/page/fileupload','PageController@fileUpload')->name('page.image.upoad');
-        Route::get('/page/edit/{page}','PageController@edit')->name('page.edit');
+        Route::get('/page/edit','PageController@edit')->name('page.edit');
         Route::post('/page/{page}','PageController@update')->name('page.update');
-        Route::get('/page/delete/{page}','PageController@destroy')->name('page.delete');
+        Route::get('/page/delete','PageController@destroy')->name('page.delete');
         
     });
 });

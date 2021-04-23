@@ -7,7 +7,7 @@
           <div class="card shadow mb-4">
             <div class="card-header py-3 d-flex justify-content-between">
               <h6 class="m-0 font-weight-bold text-primary pt-2">Pages Data</h6>
-              <a href="{{route('admin.page.create')}}"  class="btn btn-primary pull-right float-right">
+              <a href="{{__setLink('admin/page/create')}}"  class="btn btn-primary pull-right float-right">
                   <i class="fas fa-plus pr-2"></i> Create Page</a>
             </div>
             <div class="card-body">
@@ -30,10 +30,10 @@
                         <td>{{$page->page}}</td>
                         <td>{{$page->slug}}</td>
                         <td>
-                            <a href="{{route('admin.page.edit',['page'=>$page->id])}}" class="btn btn-primary btn-circle">
+                            <a href="{{route('admin/page/edit',['id'=>$page->id])}}" class="btn btn-primary btn-circle">
                               <i class="fas fa-edit"></i>
                             </a>
-                            <a href="{{route('admin.page.delete',['page'=>$page->id])}}}" class="btn btn-danger btn-circle" onclick="return confirm('Are you sure?')?true:false">
+                            <a href="{{__setLink('admin/page/delete',['id'=>$page->id])}}}" class="btn btn-danger btn-circle" onclick="return confirm('Are you sure?')?true:false">
                               <i class="fas fa-trash"></i>
                             </a>
                         </td>

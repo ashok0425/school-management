@@ -83,6 +83,8 @@ class PageController extends Controller
      */
     public function edit(Page $page)
     {
+        $params = __decryptToken();
+        dd($params);
         return view('admin.admin.page.form',compact('page'));
     }
 
@@ -127,6 +129,8 @@ class PageController extends Controller
      */
     public function destroy(Page $page)
     {
+        $params = __decryptToken();
+        dd($params);
         try{
             $page->delete();
             $notification = array(
