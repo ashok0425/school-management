@@ -9,6 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{{asset('bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('fonts/fontawesome-icons.css')}}" rel="stylesheet">
+    <!--Gallery slider css -->
+    <link rel="stylesheet" href="{{asset('image_gallery_plugin/jquery.lightbox.css')}}"> 
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <!-- <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/contacts.css">
@@ -18,8 +20,8 @@
     <link rel="stylesheet" href="css/spacinghelper.css">
     <link rel="stylesheet" href="css/terms.css">
     <link rel="stylesheet" href="css/faq.css"> -->
-    <!--page css -->
-
+    
+    
 
 
 </head>
@@ -33,10 +35,10 @@
 <script src="{{asset('bootstrap/js/bootstrap.min.js')}}"></script>
 <script src="{{asset('js/jquery.slicknav.min.js')}}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-` <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 <script src="{{asset('js/navbar.js')}}"></script>
-
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
+<script src="{{asset('image_gallery_plugin/jquery.lightbox.js')}}"></script>
 <script>
     $("#accordion").on("hide.bs.collapse show.bs.collapse", e => {
         $(e.target)
@@ -48,6 +50,11 @@
 </script>
 @stack('scripts')
 
-
+<script>
+    // image gallery 
+    $(function() {
+  $('.gallery a').lightbox(); 
+});
+</script>
 </body>
 </html>

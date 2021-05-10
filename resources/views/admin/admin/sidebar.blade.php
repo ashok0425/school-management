@@ -41,9 +41,21 @@
         <i class="fas fa-ad"></i>
         <span>Advertisement</span></a>
     </li>
-   
-
-    
+    <li class="nav-item {{Request::segment(2)=='information'?'active':''}}">
+        <a class="nav-link" href="{{__setLink('admin/information/__list')}}">
+        <i class="fas fa-ad"></i>
+        <span>Information</span></a>
+    </li>
+    <li class="nav-item {{Request::segment(2)=='gallery'?'active':''}}">
+        <a class="nav-link" href="{{__setLink('admin/gallery/__list')}}">
+        <i class="fas fa-ad"></i>
+        <span>Gallery</span></a>
+    </li>
+    <li class="nav-item {{Request::segment(2)=='faq'?'active':''}}">
+        <a class="nav-link" href="{{__setLink('admin/faq/__list')}}">
+        <i class="fas fa-ad"></i>
+        <span>Faq</span></a>
+    </li>
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
 

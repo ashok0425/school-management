@@ -129,8 +129,8 @@ function validateToken($type=null){
 							);
 			header("HTTP/1.1 453 Not Valid Request");
 		}
-		return json_encode($response);
-		
+		echo json_encode($response);
+		exit;
 }
 
 function spellOut($number){

@@ -38,10 +38,12 @@
                 <h5>Follow us</h5>
                 <ul class="list-unstyled quick-links">
                     <li><a href="#"><i class="fa fa-angle-double-right"></i>Home</a></li>
-                    <li><a href="#"><i class="fa fa-angle-double-right"></i>About</a></li>
+                    <li><a href="/aboutus"><i class="fa fa-angle-double-right"></i>About</a></li>
                     <li><a href="/faq"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
-                    <li><a href="/terms-and-conditions"><i class="fa fa-angle-double-right"></i>Terms & Conditions</a></li>
-                    <li><a href="https://wwwe.sunlimetech.com" title="Design and developed by"><i class="fa fa-angle-double-right"></i>Imprint</a></li>
+                    <li><a href="/gallery"><i class="fa fa-angle-double-right"></i>Gallery</a></li>
+
+                    <li><a href="/termandconditions"><i class="fa fa-angle-double-right"></i>Terms & Conditions</a></li>
+                    <li><a href="/privacyandpolicy" title="Design and developed by"><i class="fa fa-angle-double-right"></i>Privecy & Policy</a></li>
                 </ul>
             </div>
             <div class="col-xs-3 col-sm-2 col-md-2  Links-list ">

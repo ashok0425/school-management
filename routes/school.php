@@ -156,6 +156,13 @@ Route::middleware('school')->group(static function () {
         Route::get('/calendar', 'CalendarController@index')->name('calendar');
         Route::post('/calendar', 'CalendarController@store')->name('calendar.add');
 
+        // Notification Controller 
+        Route::get('/notification/list', 'NotificationController@index')->name('calendar');
+        Route::get('/notification/create', 'NotificationController@create')->name('notification.create');
+        Route::post('/notification/store', 'NotificationController@store')->name('notification.store');
+        Route::get('/notification/delete', 'NotificationController@delete');
+
+        Route::get('/notification/getsection/{id}', 'NotificationController@GetSection');
     });
 });
 

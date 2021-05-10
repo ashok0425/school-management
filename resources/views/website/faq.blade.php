@@ -27,54 +27,32 @@
     <!--sllider image ends here-->
 
     <!--contents faq starts here-->
-    <section class="faqheadings bg-white section-paddings">
+    {{-- <section class="faqheadings bg-white section-paddings">
         <div class="container">
             <h5 class="section-headings">Everything that you need to know about Lyceex</h5>
             <div class="row faqhead">
+                @foreach ($faq as $item)
                 <div class="col-md-4">
-                    <div class="faq-title"><a href="#">Getting started with Lyceex</a></div>
-                    <div class="faq-title"><a href="#">Lyceex webinars</a></div>
-                    <div class="faq-title"><a href="#">Search Plans and Pricing</a></div>
-                    <div class="faq-title"><a href="#">Direct Messages</a></div>
-                    <div class="faq-title"><a href="#">webinars</a></div>
-                    <div class="faq-title"><a href="#">Lyceex webinars</a></div>
-                    <div class="faq-title"><a href="#">Search Plans and Pricing</a></div>
-                    <div class="faq-title"><a href="#">Direct Messages</a></div>
-                </div>
-                <div class="col-md-4">
-                    <div class="faq-title"><a href="#">Search Plans and Pricing</a></div>
-                    <div class="faq-title"><a href="#">Getting started with Lyceex</a></div>
-                    <div class="faq-title"><a href="#">Lyceex webinars</a></div>
-                    <div class="faq-title"><a href="#">Search Plans and Pricing</a></div>
-                    <div class="faq-title"><a href="#">Direct Messages</a></div>
-                    <div class="faq-title"><a href="#">webinars</a></div>
-                    <div class="faq-title"><a href="#">Direct Messages</a></div>
-                    <div class="faq-title"><a href="#">webinars</a></div>
-
-                </div>
-                <div class="col-md-4">
-
-                    <div class="faq-title"><a href="#">Search Plans and Pricing</a></div>
-                    <div class="faq-title"><a href="#">Direct Messages</a></div>
-                    <div class="faq-title"><a href="#">webinars</a></div>
-                    <div class="faq-title"><a href="#">Direct Messages</a></div>
-                    <div class="faq-title"><a href="#">webinars</a></div>
-                    <div class="faq-title"><a href="#">Search Plans and Pricing</a></div>
-                    <div class="faq-title"><a href="#">Getting started with Lyceex</a></div>
-                    <div class="faq-title"><a href="#">Lyceex webinars</a></div>
-                </div>
+                    <div class="faq-title"><a href="">{{$item->qst}}</a></div>
+                    
+                </div>  
+                @endforeach
+              
+             
+            
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <section class="accordingfaq bg-off-white section-paddings">
         <div class="container">
             <div id="accordion" class="myaccordion">
+                @foreach ($faq as $item)
                 <div class="card">
                     <div class="card-header" id="headingone">
                         <h2 class="mb-0">
-                            <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseone" aria-expanded="false" aria-controls="collapseone">
-                                Getting started with Lyceex
+                            <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseone{{$item->id}}" aria-expanded="false" aria-controls="collapseone">
+                                {{$item->title}}
                                 <span class="fa-stack fa-sm">
                                     <i class="fas fa-circle fa-stack-2x"></i>
                                     <i class="fas fa-plus fa-stack-1x fa-inverse"></i>
@@ -82,53 +60,16 @@
                             </button>
                         </h2>
                     </div>
-                    <div id="collapseone" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div id="collapseone{{$item->id}}" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                         <div class="card-body">
-                            <p>Where do I download the latest version of Lyceex?
-                                You can download the latest version of Lyceex from our Download Center. Learn more about downloading Lyceex.</p>
+                            <p>{!!$item->description!!}</p>
 
                         </div>
                     </div>
-                </div>
-                <div class="card">
-                    <div class="card-header" id="headingtwo">
-                        <h2 class="mb-0">
-                            <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapsetwo" aria-expanded="false" aria-controls="collapsetwo">
-                                Search Plans and Pricing
-                                <span class="fa-stack fa-2x">
-                            <i class="fas fa-circle fa-stack-2x"></i>
-                            <i class="fas fa-plus fa-stack-1x fa-inverse"></i>
-                          </span>
-                            </button>
-                        </h2>
-                    </div>
-                    <div id="collapsetwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                        <div class="card-body">
-                            <p>Where do I download the latest version of Lyceex?
-                                You can download the latest version of Lyceex from our Download Center. Learn more about downloading Lyceex.</p>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header" id="headingthree">
-                        <h2 class="mb-0">
-                            <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapsethree" aria-expanded="false" aria-controls="collapsethree">
-                                Lyceex webinars
-                                <span class="fa-stack fa-2x">
-                                    <i class="fas fa-circle fa-stack-2x"></i>
-                                    <i class="fas fa-plus fa-stack-1x fa-inverse"></i>
-                                  </span>
-                            </button>
-                        </h2>
-                    </div>
-                    <div id="collapsethree" class="collapse" aria-labelledby="headingthree" data-parent="#accordion">
-                        <div class="card-body">
-                           <p>Where do I download the latest version of Lyceex?
-                               You can download the latest version of Lyceex from our Download Center. Learn more about downloading Lyceex.</p>
-                        </div>
-                    </div>
-                </div>
+                </div> 
+                @endforeach
+                
+            
             </div>
 
         </div>

@@ -27,11 +27,23 @@ Route::get('/faq', function () {
 Route::get('/contact-us', function () {
     return view('website.contacts');
 });
-Route::get('/terms-and-conditions', function () {
-    return view('website.termsandconditions');
-});
+
 
 // Route::get('/login','Admin\LoginController@logout')->name('login');
 
 Route::get('/logout','Admin\LoginController@logout')->name('logout');
+
+// Gallery page
+Route::get('/gallery','Frontend\GalleryController@showGallery')->name('frontend.gallery');
+// Gallery images page 
+Route::get('/gallery/images','Frontend\GalleryController@showGalleryImage')->name('frontend.gallery.image');
+// About us page 
+Route::get('/aboutus','Frontend\PageController@About')->name('frontend.aboutus');
+// Term and Conditions
+Route::get('/termandconditions','Frontend\PageController@Term')->name('frontend.term');
+// Privacy Policy
+Route::get('/privacyandpolicy','Frontend\PageController@Privacy')->name('frontend.Privacy');
+// Faq
+Route::get('/faq','Frontend\FaqController@Faq')->name('frontend.faq');
+
 

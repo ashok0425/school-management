@@ -71,7 +71,11 @@
             <i class="fas fa-calendar"></i>
             <span>Routine</span></a>
     </li>
-
+    <li class="nav-item {{Request::segment(2)=='notification'?'active':''}}">
+        <a class="nav-link " href="{{__setLink('school/notification/list')}}">
+            <i class="fas fa-calendar"></i>
+            <span>Notification</span></a>
+    </li>
 
 
     <!-- Divider -->
